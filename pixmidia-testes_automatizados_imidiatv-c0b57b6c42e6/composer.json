@@ -1,0 +1,13 @@
+{
+    "require": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-webdriver": "^1.2",
+        "se/selenium-server-standalone": "^3.141",
+        "enm1989/chromedriver": "^91.0"
+    },
+    "require-dev": {
+        "lucatume/codeception-steppify": "^1.0"
+    }
+}

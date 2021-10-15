@@ -1,0 +1,4 @@
+actor: InsercaoDinamicaTester
+modules:
+    enabled:
+        - \Helper\InsercaoDinamica

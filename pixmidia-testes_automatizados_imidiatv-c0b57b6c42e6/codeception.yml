@@ -1,0 +1,38 @@
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+modules:
+    enabled:
+        - WebDriver:
+            url: 'http://imidiatv.hml/'
+            port: 9515
+            browser: chrome
+            host: localhost
+            capabilities:
+             chromeOptions:
+                # Habilitar somente para teste ou contrução de scripts. 
+                # args: ["start-maximized"] #Inicia o browser com tela maximizada.  
+                 
+                # Desabilite a linha abaixo para usar o comando acima.
+                 args: ["--headless", "--disable-gpu"] #Deixar habilitado caso seja usado o chromedriver de modo headless
+
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+        - Codeception\Extension\RunProcess:
+            0: php -S http://imidiatv.hml -t tests/data/app
+            1: java -jar ~/selenium-server-standalone-3.14.1.jar
+            2: chromedriver --url-base=/wd/hub
+    commands: [tad\Codeception\Command\Steppify]
+gherkin:
+    contexts:
+        default: #Ao criar um novo suite, adicionar o "Tester" da suite abaixo para que a feature leia o context
+            - LoginTester
+            - FeatureTester
+            - AdditionalSteps
+            - MidiasTester
+            - InsercaoDinamicaTester

@@ -1,0 +1,2421 @@
+<html lang="en" class=" js no-touch"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <title>IMidiaTV - SINALIZAÇÃO DIGITAL</title>
+
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Hugo Ferreira">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+	<link rel="stylesheet" href="/assets/css/all-styles.min.css?version=131279_327e50542de410449889110db463ccfe">
+	<link rel="stylesheet" href="/assets/css/styles_fix.css?version=131279_327e50542de410449889110db463ccfe">
+
+	
+    <script src="/assets/js/top-scripts.min.js?version="></script>
+    <script src="/assets/js/myapp.min.js?version="></script>
+    
+	<script>
+				var FILE_REPOSITORY_BASE_URL = "https://storage.googleapis.com/imidiatv-midias/";
+
+	</script>
+
+    <style>
+        #conpassAssistant.conpassAssistant {
+            top: auto !important;
+            bottom: 8px;
+            left: 10px;
+            width:67px;
+        }
+        body{
+            padding-left:0;
+            transition: padding-left .1s .1s;
+        }
+
+        body.show-help{
+            padding-left:250px;
+        }
+		.modal-header{
+			cursor:move;
+		}
+    </style>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+
+<body class="">
+
+
+
+
+
+
+	
+    	<style>
+		#no-active-item:active,#no-active-item:selected
+		{
+			background-color:initial!important;
+		}
+		.popup-user-message a{
+			background:initial!important;
+			color:#0092cc!important;
+			padding:0!important;
+			margin:0!important;
+			text-decoration:underline;
+		}
+		.dropdown-menu-scroll{
+            max-height: 85vh;
+            overflow-y: scroll
+        }
+	</style>
+	<div id="header" style="top:0px;" class="header-fixed">
+		<div class="container-fluid">
+			<div class="navbar">
+
+				<div class="navbar-header" style="width:100%;">
+					<!-- Show navigation toggle on phones -->
+
+
+					<!-- Show logo for large screens and laptops -->
+					<a class="navbar-brand visible-lg visible-md visible-sm visible-xs" href="/dashboard" style="position:absolute;z-index:1;">
+						<img src="/assets/img/logo-imidiatv.png" alt="" height="45">
+
+					</a>
+
+											<div style="color:#FF0;font-weight:bold;position: absolute;top:25px;left:220px;">
+															HOMOLOGAÇÃO
+													</div>
+					
+					<button id="showNav" class="navbar-toggle pull-right" type="button" data-toggle="collapse" data-target="#top-nav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<!-- Show logo for small screens -->
+					<!--                <a class="navbar-brand hidden-lg hidden-md hidden-xs" href="/">-->
+					<!--                    <img height="47" src="--><!--" alt="">-->
+					<!--                </a>-->
+
+				</div>
+
+
+				<nav id="top-nav" class="collapse navbar-collapse" role="navigation">
+
+					<!-- Navbar nav -->
+					<ul class="nav navbar-nav pull-right">
+
+													<li>
+								<a title="Página inicial" class="" href="/dashboard"><i class="im-home"></i> <span class="txt"></span></a>
+							</li>
+						
+													<li>
+								<a title="Monitoramento dos players" class="" href="/monitoramento/otimizado"><i class="im-dashboard"></i> <span class="txt hidden-sm">Monitoramento</span></a>
+							</li>
+						
+						
+													<li class="dropdown">
+
+								<a href="#" data-toggle="dropdown">
+									<i class="im-drawer3"></i>
+									<span class="avatar-name hidden-sm">Cadastro</span>
+									<span class="caret ml5"></span>
+								</a>
+
+								<ul class="dropdown-menu right" role="menu" style="margin-left: -58.5px;">
+									<!--                                <li><a class="--><!--" href="/cliente"><i class="im-users4"></i> <span class="txt">Clientes</span></a></li>-->
+									<li><a class="" href="/grade"><i class="im-movie3"></i> <span class="txt">Grade de Programação</span></a></li>
+
+									
+									<li><a class="active-state" href="/midia"><i class="im-film3"></i> <span class="txt">Midias</span></a></li>
+									<li><a class="" href="/player"><i class="im-screen"></i> <span class="txt">Meus Players</span></a></li>
+									<li><a class="" href="/musica"><i class="im-playlist"></i> <span class="txt">PlayList de Música</span></a></li>
+									<li><a class="" href="/agenciadenoticias"><i class="im-feed3"></i> <span class="txt">Agência de notícias</span></a></li>
+
+																			<li><a class="" href="/barraplayerv3"><i class="im-minus"></i> <span class="txt">Barra de informações inferior</span></a></li>
+									
+									<li><a class="" href="/barralateralv3"><i class="im-pause2"></i> <span class="txt">Barra de informações lateral</span></a></li>
+
+									<li><a class="" href="/redessociais"><i class="im-facebook2"></i> <span class="txt">Facebook</span></a></li>
+
+																	</ul>
+
+							</li>
+						
+													<li>
+								<a class="" href="/downloads"><i class="im-download7"></i> <span class="txt hidden-sm">Downloads</span></a>
+							</li>
+						
+						<li class="dropdown" id="dropdown-user-messages" style="background-color:initial!important;">
+
+														<a id="btn-open-mensagens-notificacao" href="javascript:;" data-toggle="dropdown">
+								<i class="fa fa-bell"></i>
+								<i id="marcador-notificacao" class="nav-notification im-circle2" style=""></i>
+							</a>
+
+							<div class="dropdown-menu right dropdown-menu-scroll" role="menu" style="width:400px;">
+																	<div id="user-message-list">
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917271" id="user-message-917271" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(10/08/2021 às 16:28) &nbsp; A Grade 7056 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917270" id="user-message-917270" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(10/08/2021 às 12:42) &nbsp; A mídia 377690 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917269" id="user-message-917269" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(05/08/2021 às 14:37) &nbsp; A Grade 6525 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917268" id="user-message-917268" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(05/08/2021 às 14:35) &nbsp; A Grade 1350 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917267" id="user-message-917267" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(01/08/2021 às 00:01) &nbsp; A Grade 5004 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917266" id="user-message-917266" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(26/07/2021 às 09:47) &nbsp; A mídia <a href="http://imidiatv.hml/midia/editar/midia/377973">377973</a> foi aprovada pelo(a) usuário(a) Suporte no dia 2021-07-26_09-47-04 e foi programada para ser inserida na grade de programação Grade teste patrick prod PDV a partir da data 2021-06-29 15:37:00.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917264" id="user-message-917264" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(21/07/2021 às 09:38) &nbsp; A mídia 177026 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917263" id="user-message-917263" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(19/07/2021 às 11:52) &nbsp; A mídia <a href="http://imidiatv.hml/midia/editar/midia/377972">377972</a> foi aprovada pelo(a) usuário(a) Suporte no dia 2021-07-19_11-52-49 e foi programada para ser inserida na grade de programação Grade teste patrick prod PDV a partir da data 2021-06-29 15:52:00.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917261" id="user-message-917261" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(13/07/2021 às 16:37) &nbsp; A mídia 182909 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917260" id="user-message-917260" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(08/07/2021 às 18:06) &nbsp; A mídia 52164 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917259" id="user-message-917259" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(07/07/2021 às 16:51) &nbsp; A mídia 190401 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																			</div>
+									<button data-ultimo-id="917259" class="btn btn-default btn-xs" style="width:100%;" type="button" id="btn-carregar-mais-notificacoes">carregar mais</button>
+															</div>
+
+						</li>
+
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown">
+								<i class="im-user"></i>
+								<span class="avatar-name hidden-sm">Suporte</span>
+								<span class="caret ml5"></span>
+							</a>
+
+							<ul class="dropdown-menu right" role="menu" style="margin-left: -36px;">
+
+								<!--                                <li><i class="im-cog"></i> Código de usuário: 100--><!--</li>-->
+								<li><a style="cursor:text;">Código de usuário: 1002</a></li>
+
+																	<li><a href="/configuracoes"><i class="im-cog"></i> Configurações</a></li>
+								
+																											<li><a href="/relatorio"><i class="im-file-powerpoint"></i> Relatórios</a></li>
+																	
+																											<li><a href="/relatorioacoes"><i class="im-file-powerpoint"></i> Relatório Ações</a></li>
+																	
+								
+									<li><a class="" href="/usuarios"><i class="im-users4"></i> <span class="txt">Usuários de acesso</span></a></li>
+
+									
+									
+								
+								<li><a href="/login/logout/midia/383579"><i class="im-switch"></i> Sair</a></li>
+
+							</ul>
+
+						</li>
+
+						
+													<li class="dropdown">
+								<a href="#" data-toggle="dropdown">
+
+									<img src="/assets/img/logo-sm.png" alt="" style="height:25px;">
+
+									<!--							<i class="im-user7"></i>-->
+									<!--	                            <span class="avatar-name">ADMIN</span>-->
+									<!--	                            <span class="caret ml5"></span>-->
+								</a>
+
+								<ul class="dropdown-menu right dropdown-menu-scroll" role="menu" style="margin-left: -112px;">
+									<li><a href="http://webmail.imidiatv.com.br" target="_blank"><i class="im-envelop-opened"></i> E-Mail Corporativo</a></li>
+									<li><a href="/gerenciatemplate"><i class="im-drawer3"></i> Gerência templates</a></li>
+									<li><a href="/imidiatv/usuariolist"><i class="im-users4"></i> Usuários</a></li>
+									<li><a href="/imidiatv/monitoramentologinplayer2"><i class="im-screen"></i> Players de Clientes</a></li>
+
+									<li><a href="/imidiatv/acl"><i class="im-lock"></i> ACL</a></li>
+
+
+									<li><a href="/imidiatv/help"><i class="im-support"></i> Área de Suporte</a></li>
+									<!--                                    <li><a href="/imidiatv/geolocalizacao" onclick="alert('em breve');return false"><i class="fa im-map3"></i> Geolocalização</a></li>-->
+									<li><a href="/imidiatv/inboxlist"><i class="im-box-add"></i> Inbox</a></li>
+
+									<li><a style="font-weight: bold;" href="/imidiatv/categoriastemplates"><i class="im-movie2"></i> Mídias de Templates</a></li>
+
+									<li><a style="" href="/imidiatv/fontes"><i class="fa  fa-font"></i> Fontes editor</a></li>
+									<!-- <li><a href="/login/logout/midia/383579"><i class="im-switch"></i> Sair</a></li> -->
+
+
+									<li><a href="/imidiatv/monitoramentologinplayer"><i class="im-screen"></i> Monitoramento Players (suporte)</a></li>
+									<li><a href="/imidiatv/monitoramentocoleta"><i class="im-dashboard"></i> Monitoramento Coleta</a></li>
+									<li><a href="/imidiatv/configuracoessite"><i class="im-cog"></i> Configurações do Site</a></li>
+
+																	</ul>
+
+							</li>
+											</ul>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+        $("#btn-open-mensagens-notificacao").click(function(){
+
+            var msgs = document.getElementsByClassName("popup-user-message");
+            var idList = [];
+            for ( var i in msgs ) {
+
+                if ( typeof msgs[i] != 'object' ) continue;
+                var id = $(msgs[i]).attr("data-msg-id");
+                if ( id == undefined ) continue ;
+
+                idList.push(id)
+
+            }
+
+            if ( idList.length > 0 ) {
+                var url = "/json/removeusermessage/idm/" + idList.join(",")
+
+                $.getJSON(url,function(response){
+
+                    if ( response.STATUS == 'OK' ) {
+                        $("#marcador-notificacao").hide();
+                    } else {
+                        alert(response.MESSAGE)
+                    }
+
+                })
+            }
+
+
+
+        })
+
+		$("#btn-carregar-mais-notificacoes").click(function(){
+            var id = $(this).attr("data-ultimo-id");
+		    var url = "/json/loadoldusermessages/ultimoid/"+id;
+		    startWait();
+		    $.getJSON(url,function(objResponse){
+                stopWait();
+		        if ( objResponse.STATUS == "OK" ) {
+		            console.log(objResponse)
+
+					if ( objResponse.DATA.length == 0 ) {
+                        $("#btn-carregar-mais-notificacoes").attr("disabled","disabled");
+                        return 0
+					}
+
+		        	var userMessageList = $("#user-message-list");
+		        	for ( var i in objResponse.DATA ) {
+		        		var userMessage = objResponse.DATA[i];
+                        var newDiv =  "<div class=\"alert-default popup-user-message\" data-msg-id=\"" + userMessage['ID_USER_MESSAGE'] + "\" id=\"user-message-" + userMessage['ID_USER_MESSAGE'] + "\" style=\"padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;\">";
+                        newDiv += "(" + userMessage['DT_CREATED'].replace(/^(\d\d\d\d)-(\d\d)-(\d\d) (\d\d:\d\d):(\d\d)$/,"$3/$2/$1 às $4") + ") &nbsp; " + userMessage['DS_MENSAGEM'];
+                        newDiv += "</div>";
+                        $(userMessageList).append(newDiv);
+                    }
+
+                    $("#btn-carregar-mais-notificacoes").attr("data-ultimo-id",userMessage['ID_USER_MESSAGE']);
+
+				} else {
+		            feedback(objResponse.MESSAGE,'error');
+				}
+
+			});
+		    $("#dropdown-user-messages").addClass("open");
+			return false;
+		});
+	</script>
+
+
+
+
+<div id="loading-content-div" style="display:none;">
+    <div class="center" style="text-align:center;">
+        <img src="/assets/img/loading.gif" alt="">
+    </div>
+</div>
+
+<div id="content">
+
+	
+
+    <div class="content-wrapper">
+
+		<!-- FEEDBACK MODAL ABAIXO -->
+				
+		<!-- CONTEUDO -->
+        <div id="page-heading" class="page-header">
+
+    <h2>
+	                <i class="im-film3"></i>
+	    
+	    	    Editar Mídia    </h2>
+    
+    <!-- Start .bredcrumb -->
+    <ul id="crumb" class="breadcrumb">
+    	<li>
+    		<i class="im-home"></i> <a href="/dashboard">Home</a>
+    	</li>
+    	
+    		<li>
+    			    			<a href="/midia">Mídias</a>    		</li>
+
+	    
+    		<li>
+    			    			Editar mídia    		</li>
+
+	        	<!-- <li><i class="icon im-home2"></i> <a href=""></a></li> -->
+    </ul>
+</div>
+<style>
+	#iframe-historico-insercao-dinamica{
+		width:100%;
+		height:400px;
+	}
+	.iframewrap { width: 600px; height: 300px; padding: 0; overflow: hidden; }
+	#iframe-midia-preview { width: 800px; height: 520px; border: 1px solid black; }
+	#iframe-midia-preview {-ms-zoom: 0.50;-moz-transform: scale(0.50);-moz-transform-origin: 0 0;-o-transform: scale(0.50);-o-transform-origin: 0 0;-webkit-transform: scale(0.50);-webkit-transform-origin: 0 0;pointer-events:none;}
+	.ui-datepicker{
+		z-index: 1000!important;
+	}
+	.scroll-block{
+		max-height:500px;
+		overflow:scroll;
+	}
+	.input-icon-right i {
+		position: absolute;
+		right: 19px;
+		top: 89px;
+		color: #d2d7d3;
+	}
+	.bs-callout-primary{
+		position:relative;
+	}
+
+	.botoes-aprovacao-reprovacao{
+		/*border:1px solid #F00;*/
+		text-align:right;
+		position:absolute;
+		width:calc(100% - 42px);
+		float:right;
+	}
+	.area-justificativa {
+		width:100%;
+		display:none;
+	}
+	.area-justificativa textarea{
+		width:100%;
+		height:100px;
+	}
+</style>
+
+<script>
+    var idMidia = 383579;
+</script>
+<script>
+    var notSubGrades = {"G1350":{"ID_GRADE_PROGRAMACAO":"1350","subGrade":null,"duracao":null,"id":"1350","name":"bo","vis":true,"sel":false},"G2556":{"ID_GRADE_PROGRAMACAO":"2556","subGrade":null,"duracao":null,"id":"2556","name":"cassio","vis":true,"sel":false},"G2998":{"ID_GRADE_PROGRAMACAO":"2998","subGrade":null,"duracao":null,"id":"2998","name":"Grade monitoramento - não editar","vis":true,"sel":false},"G3368":{"ID_GRADE_PROGRAMACAO":"3368","subGrade":null,"duracao":null,"id":"3368","name":"TV Corporativa Pix Mídia - Não apagar","vis":true,"sel":false},"G4905":{"ID_GRADE_PROGRAMACAO":"4905","subGrade":null,"duracao":null,"id":"4905","name":"Grade de testes vertical ","vis":true,"sel":false},"G5091":{"ID_GRADE_PROGRAMACAO":"5091","subGrade":null,"duracao":null,"id":"5091","name":"Grade Alpha.","vis":true,"sel":false},"G5584":{"ID_GRADE_PROGRAMACAO":"5584","subGrade":"13736","duracao":"10","id":"5584","name":"Especial Dia das Mulheres","vis":true,"sel":false},"G5732":{"ID_GRADE_PROGRAMACAO":"5732","subGrade":null,"duracao":null,"id":"5732","name":"Coronavírus","vis":true,"sel":false},"G5751":{"ID_GRADE_PROGRAMACAO":"5751","subGrade":null,"duracao":null,"id":"5751","name":"Mensagens positivas para tempos turbulentos","vis":true,"sel":false},"G5756":{"ID_GRADE_PROGRAMACAO":"5756","subGrade":null,"duracao":null,"id":"5756","name":"Segurança no Trabalho","vis":true,"sel":false},"G5909":{"ID_GRADE_PROGRAMACAO":"5909","subGrade":null,"duracao":null,"id":"5909","name":"Semana do Meio Ambiente","vis":true,"sel":false},"G6394":{"ID_GRADE_PROGRAMACAO":"6394","subGrade":"13736","duracao":null,"id":"6394","name":"Teste lucas 1108","vis":true,"sel":false},"G6525":{"ID_GRADE_PROGRAMACAO":"6525","subGrade":null,"duracao":null,"id":"6525","name":"xpto","vis":true,"sel":false},"G6657":{"ID_GRADE_PROGRAMACAO":"6657","subGrade":null,"duracao":null,"id":"6657","name":"Cópia de Teste lucas 1109","vis":true,"sel":false},"G6688":{"ID_GRADE_PROGRAMACAO":"6688","subGrade":null,"duracao":null,"id":"6688","name":"TESTE FACE","vis":true,"sel":false},"G6755":{"ID_GRADE_PROGRAMACAO":"6755","subGrade":null,"duracao":null,"id":"6755","name":"Teste URL Portobello","vis":true,"sel":false},"G6813":{"ID_GRADE_PROGRAMACAO":"6813","subGrade":null,"duracao":null,"id":"6813","name":"teste loterias","vis":true,"sel":false},"G6891":{"ID_GRADE_PROGRAMACAO":"6891","subGrade":"1350","duracao":"8","id":"6891","name":"TESTE TOTVS","vis":true,"sel":false},"G6900":{"ID_GRADE_PROGRAMACAO":"6900","subGrade":null,"duracao":null,"id":"6900","name":"Hugo - Testes","vis":true,"sel":false},"G6992":{"ID_GRADE_PROGRAMACAO":"6992","subGrade":null,"duracao":null,"id":"6992","name":"Cópia de Teste lucas 1108","vis":true,"sel":false},"G6993":{"ID_GRADE_PROGRAMACAO":"6993","subGrade":null,"duracao":null,"id":"6993","name":"Teste lucas vert","vis":true,"sel":false},"G7016":{"ID_GRADE_PROGRAMACAO":"7016","subGrade":null,"duracao":null,"id":"7016","name":"teste altenburg","vis":true,"sel":false},"G7056":{"ID_GRADE_PROGRAMACAO":"7056","subGrade":null,"duracao":null,"id":"7056","name":"Teste de Grade de Programação","vis":true,"sel":false},"G7089":{"ID_GRADE_PROGRAMACAO":"7089","subGrade":null,"duracao":null,"id":"7089","name":"teste 30\/11","vis":true,"sel":false},"G7094":{"ID_GRADE_PROGRAMACAO":"7094","subGrade":null,"duracao":null,"id":"7094","name":"Grade de conteúdo de Dezembro","vis":true,"sel":false},"G7171":{"ID_GRADE_PROGRAMACAO":"7171","subGrade":null,"duracao":null,"id":"7171","name":"007 - Grade","vis":true,"sel":false},"G7264":{"ID_GRADE_PROGRAMACAO":"7264","subGrade":null,"duracao":null,"id":"7264","name":"Horizontal e Vertical - Teste","vis":true,"sel":false},"G7353":{"ID_GRADE_PROGRAMACAO":"7353","subGrade":null,"duracao":null,"id":"7353","name":"teste de player 1501","vis":true,"sel":false},"G8647":{"ID_GRADE_PROGRAMACAO":"8647","subGrade":"7284","duracao":null,"id":"8647","name":"Grade de Test","vis":true,"sel":false},"G11642":{"ID_GRADE_PROGRAMACAO":"11642","subGrade":null,"duracao":null,"id":"11642","name":"teste de moedas e brasileirão","vis":true,"sel":false},"G12380":{"ID_GRADE_PROGRAMACAO":"12380","subGrade":"13736","duracao":"9","id":"12380","name":"Grade teste patrick prod PDV","vis":true,"sel":false},"G12388":{"ID_GRADE_PROGRAMACAO":"12388","subGrade":"6525","duracao":"9","id":"12388","name":"Teste RV tecnologia - 19-04","vis":true,"sel":false}};
+</script>
+<script>
+    var playerList = [{"id":"5078","ds":"Desktop teste","idgrade":"5584","idSeg":null,"idReg":null,"idGru":null,"grade":"Especial Dia das Mulheres","seg":null,"reg":null,"sel":false,"vis":true},{"id":"930","ds":"desktop Windows","idgrade":"12380","idSeg":null,"idReg":null,"idGru":"5855","grade":"Grade teste patrick prod PDV","seg":null,"reg":null,"sel":false,"vis":true},{"id":"1260","ds":"Hugo Windows","idgrade":"6900","idSeg":null,"idReg":null,"idGru":"5857","grade":"Hugo - Testes","seg":null,"reg":null,"sel":false,"vis":true},{"id":"3215","ds":"KARINE - TESTES LOTERIAS","idgrade":"6813","idSeg":null,"idReg":null,"idGru":null,"grade":"teste loterias","seg":null,"reg":null,"sel":false,"vis":true},{"id":"7631","ds":"Monitor do lado da Bruna","idgrade":"12380","idSeg":null,"idReg":null,"idGru":"8731","grade":"Grade teste patrick prod PDV","seg":null,"reg":null,"sel":false,"vis":true},{"id":"897","ds":"Mxq android 4","idgrade":"5091","idSeg":null,"idReg":null,"idGru":null,"grade":"Grade Alpha.","seg":null,"reg":null,"sel":false,"vis":true},{"id":"12939","ds":"novo teste relatorio","idgrade":"5584","idSeg":null,"idReg":null,"idGru":null,"grade":"Especial Dia das Mulheres","seg":null,"reg":null,"sel":false,"vis":true},{"id":"3859","ds":"Pc Cassio","idgrade":"6525","idSeg":null,"idReg":null,"idGru":null,"grade":"xpto","seg":null,"reg":null,"sel":false,"vis":true},{"id":"4504","ds":"Pc Diego","idgrade":"6688","idSeg":null,"idReg":null,"idGru":"8731","grade":"TESTE FACE","seg":null,"reg":null,"sel":false,"vis":true},{"id":"2838","ds":"player de testes antigo","idgrade":"5091","idSeg":null,"idReg":null,"idGru":null,"grade":"Grade Alpha.","seg":null,"reg":null,"sel":false,"vis":true},{"id":"3006","ds":"Player de testes DEMO","idgrade":"1350","idSeg":null,"idReg":null,"idGru":null,"grade":"bo","seg":null,"reg":null,"sel":false,"vis":true},{"id":"9890","ds":"Player de Testes Pix","idgrade":"7171","idSeg":null,"idReg":null,"idGru":null,"grade":"007 - Grade","seg":null,"reg":null,"sel":false,"vis":true},{"id":"589","ds":"Player de testes Pixmidia","idgrade":"7171","idSeg":null,"idReg":null,"idGru":null,"grade":"007 - Grade","seg":null,"reg":null,"sel":false,"vis":true},{"id":"3003","ds":"Player Livre Testes","idgrade":"5732","idSeg":null,"idReg":null,"idGru":"6387","grade":"Coronavírus","seg":null,"reg":null,"sel":false,"vis":true},{"id":"12108","ds":"Player Teste - RV Tecnologia","idgrade":"12388","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste RV tecnologia - 19-04","seg":null,"reg":null,"sel":false,"vis":true},{"id":"4153","ds":"Player Tx3 - Gustavo","idgrade":"5065","idSeg":null,"idReg":null,"idGru":"5324","grade":"RV Salvador 2","seg":null,"reg":null,"sel":false,"vis":true},{"id":"1743","ds":"t95n","idgrade":"5091","idSeg":null,"idReg":null,"idGru":"5857","grade":"Grade Alpha.","seg":null,"reg":null,"sel":false,"vis":true},{"id":"8150","ds":"TESTE 2509","idgrade":"4905","idSeg":null,"idReg":null,"idGru":null,"grade":"Grade de testes vertical ","seg":null,"reg":null,"sel":false,"vis":true},{"id":"9615","ds":"teste 3012","idgrade":"6394","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste lucas 1108","seg":null,"reg":null,"sel":false,"vis":true},{"id":"7009","ds":"Teste bloco informativo(barra superior com midias)","idgrade":"6755","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste URL Portobello","seg":null,"reg":null,"sel":false,"vis":true},{"id":"2704","ds":"Teste Cassio - nao apagar","idgrade":"4821","idSeg":null,"idReg":null,"idGru":null,"grade":"Pelegrini","seg":null,"reg":null,"sel":false,"vis":true},{"id":"8283","ds":"TESTE ID HML","idgrade":"12380","idSeg":null,"idReg":null,"idGru":"8731","grade":"Grade teste patrick prod PDV","seg":null,"reg":null,"sel":false,"vis":true},{"id":"9350","ds":"Teste para dupla vertical ","idgrade":"4905","idSeg":null,"idReg":null,"idGru":null,"grade":"Grade de testes vertical ","seg":null,"reg":null,"sel":false,"vis":true},{"id":"5620","ds":"Teste Pix Mídia Tx6","idgrade":"1350","idSeg":null,"idReg":null,"idGru":null,"grade":"bo","seg":null,"reg":null,"sel":false,"vis":true},{"id":"8282","ds":"teste PLAYER NOVO 01","idgrade":"11642","idSeg":null,"idReg":null,"idGru":null,"grade":"teste de moedas e brasileirão","seg":null,"reg":null,"sel":false,"vis":true},{"id":"8285","ds":"teste PLAYER NOVO 04","idgrade":"6394","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste lucas 1108","seg":null,"reg":null,"sel":false,"vis":true},{"id":"1151","ds":"Teste tablet","idgrade":"5732","idSeg":null,"idReg":null,"idGru":"5857","grade":"Coronavírus","seg":null,"reg":null,"sel":false,"vis":true},{"id":"9777","ds":"teste TX2 1","idgrade":"6394","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste lucas 1108","seg":null,"reg":null,"sel":false,"vis":true},{"id":"9778","ds":"TESTE tx2 2","idgrade":"6394","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste lucas 1108","seg":null,"reg":null,"sel":false,"vis":true},{"id":"8055","ds":"teste001","idgrade":"2556","idSeg":null,"idReg":null,"idGru":null,"grade":"cassio","seg":null,"reg":null,"sel":false,"vis":true},{"id":"3002","ds":"testes DEMO 2","idgrade":"1350","idSeg":null,"idReg":null,"idGru":null,"grade":"bo","seg":null,"reg":null,"sel":false,"vis":true},{"id":"5655","ds":"Testes Imidiatv","idgrade":"5091","idSeg":null,"idReg":null,"idGru":null,"grade":"Grade Alpha.","seg":null,"reg":null,"sel":false,"vis":true},{"id":"536","ds":"Testes Imidiatv ","idgrade":"6194","idSeg":null,"idReg":null,"idGru":"5856","grade":"Grade Suprimentos 01 - 11° andar (Tela 01)","seg":null,"reg":null,"sel":false,"vis":true},{"id":"4139","ds":"Testes Pixmidia 2","idgrade":"6349","idSeg":null,"idReg":null,"idGru":null,"grade":"406672,NOVA LAPA PROMOCIONAL - RV Salvador PDV Nova Lapa","seg":null,"reg":null,"sel":false,"vis":true},{"id":"7638","ds":"teste_1708","idgrade":"7171","idSeg":null,"idReg":null,"idGru":null,"grade":"007 - Grade","seg":null,"reg":null,"sel":false,"vis":true},{"id":"7598","ds":"teste_lucas TX 11.08","idgrade":"6394","idSeg":null,"idReg":null,"idGru":null,"grade":"Teste lucas 1108","seg":null,"reg":null,"sel":false,"vis":true},{"id":"566","ds":"v88 teste","idgrade":"4721","idSeg":null,"idReg":null,"idGru":"5856","grade":"00503 Porto Velho","seg":null,"reg":null,"sel":false,"vis":true}];
+</script>
+<script>
+    var segmentosList = [];
+</script>
+<script>
+    var regionaisList = [];
+</script>
+<script>
+    var titulosFiltros = {"tituloSegmento":"Segmento","tituloRegiao":"Região","tituloLocalizacao":"Localização"};
+</script>
+<script>
+    var configuracaoInsercaoDinamica = {"ID_USUARIO":"2","ID_GRADE_PROGRAMACAO_PADRAO":"6938","NM_DURACAO_PADRAO_GRADES":9,"DINSERT_ESCALA_TEMPO":"M"};
+</script>
+
+<!-- /UPLOAD -->
+
+<div class="content-inner ng-scope" ng-app="imidiatvApp" ng-controller="MidiaEditar">
+
+	<style>
+    #folder-browser{
+        list-style: none;
+    }
+    #folder-browser li{
+        /*   background-color:#ddd; */
+        width:120px;
+        /*margin:3px;*/
+        margin-right:3px;
+        margin-bottom:3px;
+        display:block;
+        float:left;
+        text-align:center;
+        line-height: 1.2em;
+        overflow: hidden;
+    }
+
+    #folder-browser label{
+        cursor:pointer;
+        height: 54px
+    }
+
+    .botao-path{
+        position:relative;
+        overflow:hidden;
+        direction: rtl;
+
+    }
+
+    .botao-path .label-path{
+        direction: rtl;
+    }
+
+</style>
+
+<div class="modal in" id="div-modal-folder-browser" tabindex="-1" role="dialog" aria-hidden="false" style="margin-top: 150px;">
+	<div id="" class="modal-dialog modal-lg modal-dialog-center" style="margin-top: -353px; margin-left: -470px;">
+		<div class="modal-content" style="max-height: 744px;">
+			<div class="modal-header">
+				<h4 class="modal-title">Selecione um grupo de players</h4>
+			</div>
+
+			<div class="modal-body" style="height: 550px;">
+
+				<ul class="breadcrumb" ng-hide="midiaFolderTree.breadcrumb.length==0">
+					<!-- ngRepeat: bread in midiaFolderTree.breadcrumb -->
+				</ul>
+
+				<ul class="breadcrumb" ng-hide="midiaFolderTree.breadcrumb.length>0">
+					<li>
+						Raiz
+					</li>
+				</ul>
+
+				<ul id="folder-browser">
+
+					<li ng-hide="midiaFolderTree.out.PARENT!=false" class="ng-hide">
+						<img src="/assets/img/folder-64.png" alt="" style="filter:grayscale(0.5)">
+						<br>
+						<label ng-bind="midiaFolderTree.out.NAME" class="ng-binding"></label>
+					</li>
+
+					<li ng-hide="midiaFolderTree.out.PARENT===false">
+						<a href="" ng-click="changeFolder(midiaFolderTree.out.PARENT,2)">
+							<img src="/assets/img/folder-64.png" alt="" style="filter:grayscale(0.5)">
+							<br>
+<!--							<label ng-bind="midiaFolderTree.out.NAME"></label>-->
+							<label>Voltar</label>
+						</a>
+					</li>
+
+					<!-- ngRepeat: folder in midiaFolderTree.in -->
+				</ul>
+
+			</div>
+
+			<div class="modal-footer" style="">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" id="" class="btn btn-primary" ng-click="selectFolder(false)">Selecionar nenhum</button>
+				<button type="button" id="" class="btn btn-primary ng-binding" ng-click="selectFolder(midiaFolderTree)" ng-bind="'Selecionar '+midiaFolderTree.out.NAME">Selecionar </button>
+			</div>
+
+		</div>
+	</div>
+</div>
+	<!--	<div class="_alert alert-warning fade in">-->
+	<!--		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>-->
+	<!--		<i class="im-warning alert-icon s24"></i>-->
+	<!--		<strong>Warning!</strong> Best check yo self, you're not looking too good.-->
+	<!--	</div>-->
+
+	
+				
+	<div class="modal" id="modal-listagem-pending-queue" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<div class="modal-dialog" style="height:90vh;width:70vw;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel2">Histórico de inserção/remoção dinâmica</h4>
+				</div>
+				<div class="modal-body">
+
+					<h3 id="aguarde-load-historico-insercao-dinamica">Aguarde...</h3>
+					<iframe id="iframe-historico-insercao-dinamica" frameborder="0"></iframe>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--	<form id="form-editar-midia-substituir-arquivo-data"  method="post" name="formEditMidia2" enctype="multipart/form-data" class="form-horizontal group-border stripped upload-with-charm" role="form" >-->
+	<input type="hidden" id="insercaoDinamica" name="ID_TIPO_INSERCAO_DINAMICA" autocomplete="off">
+	<input type="hidden" id="insercaoDinamicaData" name="DT_EXECUCAO" autocomplete="off">
+	<div class="modal" id="modal-listagem-pending-queue2" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" style="height:40vh;width:20vw;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel2">Reagendamento</h4>
+				</div>
+				<div class="modal-body">
+
+					<div class="col-lg-6 col-md-6" style="width:100%">
+						<label class="control-label">Data</label>
+						<div class="input-group">
+							<input type="hidden" id="data-agendamento-antiga" autocomplete="off">
+							<input type="hidden" id="id-linha-agendamento" autocomplete="off">
+							<input type="hidden" id="tipo-reagendamento-insercao-dinamica" autocomplete="off">
+							<input class="form-control datetimepicker hasDatepicker" type="text" name="DATA_AGENDAMENTO_INSERCAO_DINAMICA_ATUALIZADA" id="data-reagendamento-insercao-dinamica" value="">
+							<span class="input-group-addon"><i class="im-calendar4"></i></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button ng-click="salvarReagendamentoInsercaoDinamica()" id="btn-salvar-player" class="btn btn-primary" type="button">Salvar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--	</form>-->
+
+			<!-- UPLOAD -->
+<div class="modal" id="modal-salvando-midia" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="mySmallModalLabel">Salvando arte</h4>
+            </div>
+			<div class="modal-body" style="text-align:center;">
+
+				<br>
+				<br>
+
+				<img src="/assets/img/loading.gif" alt="">
+				<br>
+				<h3>Aguarde...</h3>
+
+				<br>
+				<br>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="modal-send-file" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+    <!-- <form id="form-upload-midia" action="http://imidiatv.hml/midia/adicionar" method="post" enctype="multipart/form-data" target="iframeSend" onsubmit="return startUpload()"> -->
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Atualizando mídia ...</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="div-sending-file-progress">
+
+                    <div id="label-enviando-nome-arquivo" class="col-lg-12" style="text-align:center;">Enviando  </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group" style="background:#fff;">
+
+                            <div class="col-lg-12">
+                                <span id="label-pct-progress">0%</span>
+                                <div class="progress progress-bar-lg" style="height:32px;">
+                                    <div class="progress-bar progress-bar-striped active" id="bar-progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                        <span class="sr-only">0% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label id="label-bytes-sent" class="col-lg-12 control-label">Aguarde...</label>
+                            <!-- <div class="col-lg-12" style="position:relative;margin-top:-26px;text-align:center;">40%</div> -->
+
+                            <br clear="all">
+                            <br clear="all">
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer" id="modal-send-file-send-cancel-buttons" style="">
+                <a href="http://imidiatv.hml/midia" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                <!-- <button type="submit" id="btn-upload-midia" class="btn btn-primary">Enviar</button> -->
+            </div>
+        </div>
+    </div>
+    <!-- </form> -->
+</div>	
+	<form id="form-editar-midia-substituir-arquivo" action="/midia/editarsubstituirimagem/midia/383579" method="post" name="formEditMidia" enctype="multipart/form-data" class="form-horizontal group-border stripped upload-with-charm ng-pristine ng-valid" role="form">
+		<div class="modal" id="modal-editar-midia-substituir-midia" tabindex="-1" role="dialog" aria-hidden="false" style="display: none;">
+	<div class="modal-dialog modal-lg modal-dialog-center" style="margin-top: -132px; margin-left: -450px;">
+		<div class="modal-content" style="max-height: 521px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span><span class="sr-only">Fechar</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Substituir Arquivo da Mídia</h4>
+			</div>
+			<div class="modal-body" style="max-height: 403px;">
+
+				<label class="control-label">Substituir Mídia</label>
+				<input type="file" id="file-midia-replace" name="file_replace" tabindex="-1" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);"><div class="bootstrap-filestyle input-group"><input type="text" class="form-control " disabled=""> <span class="group-span-filestyle input-group-btn" tabindex="0"><label for="file-midia-replace" class="btn btn-default "><span class="filestyleicon filestyleicon-folder-open"></span> Escolher arquivo</label></span></div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+			</div>
+		</div>
+	</div>
+</div>	</form>
+
+	<form method="post" name="formEditMidia" id="form-edit-midia" class="form-horizontal group-border stripped ng-pristine ng-valid" role="form">
+
+		<div class="tabs mb20">
+
+
+			<div class="col-lg-12 col-md-12" style="text-align:right;z-index:10;">
+									<button ng-click="submitForm()" type="button" class="btn btn-primary">Salvar</button>
+
+					
+							</div>
+
+			<ul id="myTab" class="nav nav-tabs" style="display:block;">
+
+				<li id="orelha-aba-geral" class="" ng-click="changeTab('midia-aba-edicao-geral')">
+					<a href="#midia-aba-edicao-geral" data-toggle="tab">Geral</a>
+				</li>
+
+									<li id="orelha-aba-publicacao" class="active" ng-click="changeTab('midia-aba-edicao-publicacao')">
+						<a href="#midia-aba-edicao-publicacao" data-toggle="tab">Inserção Dinâmica</a>
+					</li>
+				
+			</ul>
+
+			<!-- ======================================================================== -->
+
+			<div id="myTabContent2" class="tab-content">
+
+				<div class="tab-pane fade" id="midia-aba-edicao-geral">
+					<p>
+						<input type="hidden" id="upload-tracking-midia-id" name="PHP_SESSION_UPLOAD_PROGRESS" value="383579" autocomplete="off">
+<input type="hidden" name="posttype" id="field-posttype" value="upload" autocomplete="off">
+
+</p><div class="row">
+	<div class="col-md-5">
+
+					<style>
+.form-ativa-desativa-som{
+	position: relative;
+	top:2px;
+	left:2px;
+}
+.ativa-desativa{
+	margin-top:15px;
+}
+</style>
+<div class="form-group">
+    <div class="col-lg-12 col-md-12">
+        <label class="control-label">Descrição</label>
+        <input class="form-control" type="text" name="DS_MIDIA" id="input-ds-midia" value="imagemautomacao - não exclur.jpg">
+    </div>
+</div>
+
+    <div class="form-group">
+        <div class="col-lg-12 col-md-12">
+			<button id="btn-editar-midia-open-modal-substituir-midia" class="btn btn-default" type="button">Substituir Mídia</button>
+        </div>
+    </div>
+
+	<input class="form-control" type="hidden" name="DT_INICIO_CAMPANHA" value="" autocomplete="off">
+	<input class="form-control" type="hidden" name="DT_FIM_CAMPANHA" value="" autocomplete="off">
+
+	<div class="form-group">
+		<div class="col-lg-12 col-md-12">
+			<label class="control-label">Segmento de mercado</label>
+
+		</div>
+
+		<div class="col-lg-12 col-md-12">
+			<div class="dica">
+				Necessário para identificar publicidades de empresas concorrentes e manter uma distância mínima na inserção dinâmica.
+			</div>
+			<div class="select2-container form-control select2" id="s2id_id-setor-mercado"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">Selecione</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><select name="ID_SETOR_MERCADO" id="id-setor-mercado" class="form-control select2 select2-offscreen" tabindex="-1" title="">
+				<option value="">Selecione</option>
+									<option value="17">Telefonia</option>
+							</select>
+
+		</div>
+	</div>
+
+
+
+    <div class="form-group">
+        <div class="col-lg-6 col-md-6">
+            <label class="control-label" style="text-align:left;">Duração da exibição na grade<br>(em segundos, mínimo 5)</label>
+            <input class="form-control" type="text" name="DURACAO" min="5" id="input-duracao" value="15">
+        </div>
+        <div class="col-lg-6 col-md-6">
+            Alterar esta informação fará com que seja atualizado o tempo de exibição desta mídia em todas as grades em que ela foi inserida.
+        </div>
+
+    </div>
+
+
+<script>
+$('#custom7').on('change', function(){
+   this.value = this.checked ? S : N;
+   // alert(this.value);
+}).change();
+</script>		
+		
+
+		<br>
+
+<!--		====================================================================================================-->
+		<!--		====================================================================================================-->
+
+		<div class="panel panel-default" id="jst_0">
+
+			<div class="panel-heading">
+				<h4 class="panel-title">Grades Exibindo Esta Mídia (0)</h4>
+									<button ng-click="removerMidiaGrades('aba-geral')" style="float:right;margin-top:7px;" id="" type="button" class="btn btn-default btn-sm"><i class="im-close"></i> Remover de todas as grades</button>
+								<a href="/file/gradesexibindomidia/midia/383579" style="float:right;margin-top:7px;" class="btn btn-default btn-sm"><i class="im-download"></i> CSV</a>
+			</div>
+
+			<div class="panel-body">
+
+				<div class="scroll-block" style="max-height: 250px;">
+
+					
+						<h5 style="text-align:center;">Esta mídia não se encontra em nenhuma grade de programação.</h5>
+
+					
+				</div>
+
+			</div>
+
+		</div>
+
+					<br>
+							<button type="button" id="btn-excluir-midia" style="float:left;" class="btn btn-danger">Excluir</button>
+					
+		<!--			<button style="float:right;" type="submit" class="btn btn-primary">Salvar</button>-->
+		
+	</div>
+
+	<div class="col-md-7">
+
+		
+							<img style="width:100%;" src="https://storage.googleapis.com/imidiatv-midias/c81e728d9d4c2f636f067f89cc14862c/43e2fbe916558b854fdb43aa9a96af02.jpg?time=1628868744" alt="">
+				dimensões: 1920x1080						<!-- <a href="https://storage.googleapis.com/imidiatv-midias/c81e728d9d4c2f636f067f89cc14862c/43e2fbe916558b854fdb43aa9a96af02.jpg">Ver imagem original</a> -->
+			<!--				<a target="_blank" href="--><!--">Baixar imagem original</a>-->
+			<!--				<a target="blank" href="--><!--">Baixar imagem original</a>-->
+			<br>
+		
+
+		<br clear="all">
+
+		<div class="bototes-acao" style="text-align:right;">
+
+			
+																
+		</div>
+
+
+
+	</div>
+</div>						<br clear="all">
+					<p></p>
+				</div>
+
+									<div class="tab-pane fade in active" id="midia-aba-edicao-publicacao">
+						<p>
+							
+</p><div class="modal" id="btn-abrir-modal-informar-lista" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel2">Informar lista para seleção</h4>
+			</div>
+			<div class="modal-body">
+
+				Você pode informar uma lista de grades (pelo ID) ou players (pelo ID ou Código Serial) para serem selecionados de forma automática.
+				Basta escolher o tipo de dado que irá informar e digitar ou colar sua lista no formulário abaixo.
+
+				<div class="select2-container form-control select2" id="s2id_selecao-lotes-tipo-dado"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Serial do player</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select class="form-control select2 select2-offscreen" name="selecao_lotes_tipo_dado" id="selecao-lotes-tipo-dado" tabindex="-1" title="">
+					<option value="serial">Serial do player</option>
+					<option value="idplayer">ID do player</option>
+					<option value="idgrade">ID da grade</option>
+				</select>
+
+				<textarea class="form-control" name="selecao_lotes_dados" id="selecao-lotes-dados" style="width:100%;line-height: 1em;font-family: monospace;" rows="10"></textarea>
+
+				<div class="dica">Uma linha para cada ítem.</div>
+
+				<input type="hidden" value="eol" name="selecao_lotes_tipo_separador" id="selecao-lotes-tipo-separador" autocomplete="off">
+
+				<!--					<select class="form-control select2" name="selecao_lotes_tipo_separador" id="selecao-lotes-tipo-separador">-->
+				<!--						<option value="eol">Cada ítem em uma linha</option>-->
+				<!--						<option value="virgula">Ítens separados por vírgula</option>-->
+				<!--					</select>-->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button ng-click="selecionarEmLotes()" type="button" class="btn btn-primary">Selecionar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	.accordion .panel-title{
+		padding:0;
+		margin:0;
+		width:100%;
+	}
+	.accordion a.accordion-toggle {
+		display:block;
+		padding:13px;
+		width:100%;
+	}
+
+	.table-wrapper{
+		overflow-y: scroll;
+		/*height: 150px;*/
+	}
+
+	.table-wrapper th{
+		position: sticky;
+		top: 0;
+	}
+
+	table{
+		border-collapse: collapse;
+	}
+
+	th{
+		background: #DDD;
+	}
+
+	.menu-tree ul,.menu-tree li{
+		list-style:none;
+	}
+	.menu-tree ul{
+		display:none;
+	}
+
+
+	.menu-tree ul {
+		padding-left:23px;
+		/*   border: 1px solid #f00!important;; */
+	}
+	.arrow-menu-tree::before{
+		/*font-size:25px;*/
+		content: "►";
+	}
+	.label-menu-tree.open .arrow-menu-tree::before{
+		content: "▼";
+	}
+	.label-menu-tree{
+		padding-left:5px!important;
+	}
+	.menu-tree p{
+		margin:0;
+		padding:0;
+		margin-bottom:1px;
+		/*padding-left:2px;*/
+		/*border: 1px solid #00FFfF;*/
+		cursor: pointer;
+		background-color:#eee;
+	}
+	.badge-black{
+		color:#777;
+	}
+	.menu-tree  button{
+		opacity:0.5;
+	}
+
+	.menu-tree p:hover button{
+		opacity:1;
+	}
+
+	.menu-tree p:hover  {
+		background-color:#f9f9f9;
+	}
+
+	.menu-tree .active{
+		background-color:#ccc!important;
+	}
+
+</style>
+
+
+<div class="col-sm-6 col-md-6">
+
+	<div class="panel panel-default" id="jst_1">
+
+		<div class="panel-heading">
+			<h4 class="panel-title">Grades selecionadas para inserção
+				<!--				dinâmica-->
+			</h4>
+		</div>
+
+		<div class="panel-body" style="margin-bottom:5px;">
+
+			<div class="input-icon-right">
+				<input id="input-filtro-grade" type="text" class="form-control right-icon ng-pristine ng-untouched ng-valid ng-empty" placeholder="Filtro" ng-model="filtroGrades" ng-change="aplicarFiltroGrades()">
+				<i class="fa-search fa s16 right-input-icon"></i>
+			</div>
+
+			<input type="hidden" name="GRADE_ADD_LIST" id="grade-add-list" autocomplete="off">
+			<div class="scroll-block">
+				<table class="table table-condensed table-wrapper">
+					<thead>
+					<tr>
+						<th></th>
+						<th>Id</th>
+						<th>Grade de Programação</th>
+						<th style="width:10px;"></th>
+					</tr>
+					</thead>
+
+					<tbody>
+					<!--					!testaFiltro(grade)-->
+					<!-- ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">1350</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">bo</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">2556</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">cassio</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">2998</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade monitoramento - não editar</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">3368</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">TV Corporativa Pix Mídia - Não apagar</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">4905</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade de testes vertical </td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5091</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade Alpha.</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5584</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Especial Dia das Mulheres</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5732</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Coronavírus</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5751</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Mensagens positivas para tempos turbulentos</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5756</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Segurança no Trabalho</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">5909</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Semana do Meio Ambiente</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6394</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Teste lucas 1108</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6525</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">xpto</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6657</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Cópia de Teste lucas 1109</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6688</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">TESTE FACE</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6755</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Teste URL Portobello</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6813</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">teste loterias</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6891</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">TESTE TOTVS</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6900</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Hugo - Testes</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6992</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Cópia de Teste lucas 1108</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">6993</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Teste lucas vert</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7016</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">teste altenburg</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7056</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Teste de Grade de Programação</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7089</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">teste 30/11</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7094</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade de conteúdo de Dezembro</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7171</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">007 - Grade</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7264</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Horizontal e Vertical - Teste</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">7353</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">teste de player 1501</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">8647</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade de Test</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">11642</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">teste de moedas e brasileirão</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">12380</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Grade teste patrick prod PDV</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades --><tr ng-repeat="grade in notSubGrades" ng-hide="!grade.vis" class="ng-scope">
+						<td style="width:1px;">
+							<input type="checkbox" ng-checked="grade.sel" ng-click="toggleSelection(grade)" __name__="GRADE_ADD_LIST[grade.id]">
+						</td>
+						<td style="width:1px;" ng-bind="grade.id" ng-click="toggleSelection(grade)" class="ng-binding">12388</td>
+						<td ng-bind="grade.name" ng-click="toggleSelection(grade)" class="ng-binding">Teste RV tecnologia - 19-04</td>
+						<td>
+							<i title="É necessário configurar grade de conteúdo informativo padrão e tempo da grade" style="color:#F00;" ng-hide="(configuracaoInsercaoDinamica.ID_GRADE_PROGRAMACAO_PADRAO != null &amp;&amp; configuracaoInsercaoDinamica.NM_DURACAO_PADRAO_GRADES != null) || (grade.subGrade!=null &amp;&amp; grade.duracao != null)" class="im-warning ng-hide"></i>
+						</td>
+					</tr><!-- end ngRepeat: grade in notSubGrades -->
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		<div style="text-align:center;">
+
+			<span class="dica ng-binding" ng-bind="'Exibindo '+gradesExibindo+' Grades.'">Exibindo 32 Grades.</span>
+
+			<span class="dica" ng-hide="gradesSelecionadas>0">Nenhuma grade selecionada </span>
+			<span class="dica ng-hide" ng-hide="gradesSelecionadas!=1">1 Grade selecionada </span>
+			<span class="dica ng-binding ng-hide" ng-hide="gradesSelecionadas<=1" ng-bind="gradesSelecionadas+' Grades selecionadas '">0 Grades selecionadas </span>
+			<!--			<span class="dica" ng-bind="' de '+totalGrades+' no total.'"></span>-->
+
+			<br>
+
+			<button type="button" ng-click="selectAll()" class="btn btn-default btn-sm">Selecionar Todos</button>
+			<button type="button" ng-click="clearSelection()" class="btn btn-default btn-sm">Selecionar Nenhum</button>
+			<button type="button" ng-click="invertSelection()" class="btn btn-default btn-sm">Inverter Seleção</button>
+
+			<button type="button" ng-click="toggleVerApenasGradesSelecionadas()" class="btn btn-default btn-sm">
+				<i ng-hide="!exibirApenasSelecionados" class="im-checkbox-checked ng-hide"></i>
+				<i ng-hide="exibirApenasSelecionados" class="im-checkbox-unchecked"></i>
+				Exibir apenas selecionados
+			</button>
+			<br>
+			<a href="javascript:;" data-toggle="modal" data-target="#btn-abrir-modal-informar-lista">Selecionar através de uma lista</a>
+			<br>
+
+		</div>
+
+	</div>
+
+			<div class="panel panel-default" id="jst_2">
+
+			<div class="panel-heading">
+				<h4 class="panel-title">Outros detalhes</h4>
+			</div>
+			<div class="panel-body">
+
+				<div class="col-lg-6 col-md-6">
+					<label class="control-label">Número de inserções</label>
+					<input class="form-control" type="number" step="1" name="NM_INSERCOES" id="input-numero-insercoes" value="1" min="1" max="5" onkeyup="this.value=this.value.replace(/[^0-9]+/,'')">
+				</div>
+				<div class="col-lg-6 col-md-6">
+					Quantidade de inserções que deseja fazer desta mídia nas grades selecionadas
+				</div>
+
+			</div>
+		</div>
+	
+			<div class="panel panel-default" id="jst_3">
+
+	<div class="panel-heading">
+		<h4 class="panel-title">Agendamento</h4>
+	</div>
+	<div class="panel-body">
+
+		<p>Altere a data abaixo caso deseje fazer uma inserção agendada para outra data.</p>
+
+
+		<!--			<div class="form-group">-->
+		<!--				<div class="col-lg-12 col-md-12">-->
+		<!--					<label class="control-label">Duração da campanha (opcional)</label>-->
+		<!--				</div>-->
+
+		<div class="col-lg-6 col-md-6">
+			<label class="control-label">Data de Inserção</label>
+			<div class="input-group">
+				<input class="form-control datetimepicker hasDatepicker" type="text" name="DATA_AGENDAMENTO_INSERCAO_DINAMICA" id="data-agendamento-insercao-dinamica" value="13/08/2021 12:32">
+				<span class="input-group-addon"><i class="im-calendar4"></i></span>
+			</div>
+		</div>
+
+		<div class="col-lg-6 col-md-6">
+			<input type="hidden" name="USAR_DATA_REMOCAO" value="0" autocomplete="off">
+
+			<!--					<input ng-checked="enableDtRemocao" ng-click="enableDtRemocao=!enableDtRemocao" type="checkbox" id="chk-usar-data-remocao" name="USAR_DATA_REMOCAO" value="1">-->
+			<label for="chk-usar-data-remocao" class="control-label">Data de Remoção (opcional)</label>
+
+			<div class="input-group">
+				<input ng-disabled="!enableDtRemocao" class="form-control datetimepicker hasDatepicker" type="text" name="DATA_AGENDAMENTO_REMOCAO_DINAMICA" id="data-agendamento-remocao-dinamica" value="">
+				<span class="input-group-addon"><i class="im-calendar4"></i></span>
+			</div>
+		</div>
+
+		<div style="text-align:center;margin-top:100px;">
+							<button ng-click="removerMidiaGradesDinamicamente()" style="" id="" type="button" class="btn btn-default btn-sm btn-remove-midia-from-all-grades"><i class="im-close"></i> Remover de todas as grades</button>
+					</div>
+
+	</div>
+
+</div>
+
+
+<div class="panel panel-default" id="jst_4">
+
+	<div class="panel-heading">
+		<h4 style="" class="panel-title">Grades Exibindo Esta Mídia (0)</h4>
+		<a href="/file/gradesexibindomidia/midia/383579" style="float:right;margin-top:7px;" class="btn btn-default btn-sm"><i class="im-download"></i> CSV</a>
+	</div>
+	<div class="panel-body">
+
+		<div class="scroll-block" style="max-height: 250px;">
+
+			
+				<h5 style="text-align:center;">Esta mídia não se encontra em nenhuma grade de programação.</h5>
+
+			
+		</div>
+
+	</div>
+
+</div>
+
+<div class="panel panel-default" id="jst_5">
+
+	<div class="panel-heading">
+		<h4 class="panel-title">Na fila para inserção/remoção dinâmica</h4>
+		<button style="float:right;margin-top:7px;" ng-click="exibirDetalhesFila()" _id="btn-ver-detalhes-agendamentos" type="button" class="btn btn-default btn-sm">Ver histórico</button>
+	</div>
+	<div class="panel-body">
+
+		
+			<h5 style="text-align:center;">Esta mídia não se encontra na fila para inserção dinâmica em nenhuma grade</h5>
+
+		
+	</div>
+
+</div>
+
+	
+
+
+</div>
+
+<div class="col-sm-6 col-md-6">
+	</div>
+<!--#################################################################################################################################################-->
+<!--#################################################################################################################################################-->
+<!--#################################################################################################################################################-->
+<!--#################################################################################################################################################-->
+<!--#################################################################################################################################################-->
+
+	<div class="col-sm-6 col-md-6">
+
+		<div class="panel-group ">
+
+
+			<div class="panel panel-default" id="jst_6">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						Selecionar Por Players
+					</h5>
+				</div>
+				<div id="collapse-players" class="panel-collapse collapse in" style="">
+					<div class="panel-body">
+
+						<div class="menu-tree">
+
+							<label for="select-id-player-segmento">Filtrar por grupo</label>
+							<button style="width:100%;" class="btn btn-default _botao-path" ng-click="startNavigate(navButtons.playerGroups)" type="button"><div class="label-path ng-binding" ng-bind="navButtons.playerGroups.label">Qualquer um</div></button>
+							<input type="hidden" value="" name="ID_PASTA" autocomplete="off">
+
+							<br>
+
+							<label for="select-id-player-segmento" ng-bind="'Filtrar '+titulosFiltros.tituloSegmento" class="ng-binding">Filtrar Segmento</label>
+							<div class="select2-container form-control select2 ng-pristine ng-untouched ng-valid ng-empty" id="s2id_select-id-player-segmento"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3">Selecione</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen">Filtrar por grupoFiltrar Segmento</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen">Filtrar por grupoFiltrar Segmento</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><select class="form-control select2 ng-pristine ng-untouched ng-valid ng-empty select2-offscreen" name="ID_PLAYER_SEGMENTO" ng-change="aplicarFiltroPlayers()" id="select-id-player-segmento" ng-model="filtroSegmento" tabindex="-1" title="Filtrar por grupoFiltrar Segmento">
+								<option value="" selected="selected">Selecione</option>
+								<!-- ngRepeat: item in segmentosList -->
+							</select>
+
+							<br>
+
+							<label for="select-id-player-regional" ng-bind="'Filtrar '+titulosFiltros.tituloRegiao" class="ng-binding">Filtrar Região</label>
+							<div class="select2-container form-control select2 ng-pristine ng-untouched ng-valid ng-empty" id="s2id_select-id-player-regional"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4">Selecione</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen">Filtrar Região</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen">Filtrar Região</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><select class="form-control select2 ng-pristine ng-untouched ng-valid ng-empty select2-offscreen" name="ID_PLAYER_SEGMENTO" ng-change="aplicarFiltroPlayers()" id="select-id-player-regional" ng-model="filtroRegional" tabindex="-1" title="Filtrar Região">
+								<option value="" selected="selected">Selecione</option>
+								<!-- ngRepeat: item in regionaisList -->
+							</select>
+
+							<br>
+
+							<label for="" ng-bind="'Filtrar '+titulosFiltros.tituloLocalizacao" class="ng-binding">Filtrar Localização</label>
+							<div class="menu-tree">
+															</div>
+
+						</div>
+
+						<div style="text-align:center;margin:10px;">
+							<button type="button" ng-click="limparSelecaoLocalizacao()" class="btn btn-default btn-sm">Limpar Seleção</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="jst_7">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						Players Selecionados <span class="dica">(apenas players com grade de programação associada)</span>
+					</h5>
+				</div>
+				<div id="1" class="" style="">
+					<div class="panel-body">
+
+						<div class="input-icon-right">
+							<input id="input-filtro-grade" type="text" class="form-control right-icon ng-pristine ng-untouched ng-valid ng-empty" placeholder="Filtro" ng-model="filtroPlayers" ng-change="aplicarFiltroPlayers()">
+							<i class="fa-search fa s16 right-input-icon"></i>
+						</div>
+
+						<div class="scroll-block">
+
+							<table class="table table-condensed table-wrapper">
+								<thead>
+									<tr>
+										<th style="width:20px;"></th>
+										<th style="width:20px;">Id</th>
+										<th>Player</th>
+										<th>Grade</th>
+										<th ng-bind="titulosFiltros.tituloSegmento" class="ng-binding">Segmento</th>
+										<th ng-bind="titulosFiltros.tituloRegiao" class="ng-binding">Região</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<!-- ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">5078</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Desktop teste</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Especial Dia das Mulheres - 5584</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">930</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">desktop Windows</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade teste patrick prod PDV - 12380</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">1260</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Hugo Windows</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Hugo - Testes - 6900</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">3215</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">KARINE - TESTES LOTERIAS</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">teste loterias - 6813</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">7631</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Monitor do lado da Bruna</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade teste patrick prod PDV - 12380</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">897</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Mxq android 4</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade Alpha. - 5091</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">12939</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">novo teste relatorio</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Especial Dia das Mulheres - 5584</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">3859</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Pc Cassio</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">xpto - 6525</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">4504</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Pc Diego</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">TESTE FACE - 6688</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">2838</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">player de testes antigo</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade Alpha. - 5091</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">3006</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player de testes DEMO</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">bo - 1350</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">9890</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player de Testes Pix</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">007 - Grade - 7171</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">589</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player de testes Pixmidia</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">007 - Grade - 7171</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">3003</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player Livre Testes</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Coronavírus - 5732</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">12108</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player Teste - RV Tecnologia</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste RV tecnologia - 19-04 - 12388</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">4153</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Player Tx3 - Gustavo</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">RV Salvador 2 - 5065</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">1743</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">t95n</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade Alpha. - 5091</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">8150</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">TESTE 2509</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade de testes vertical  - 4905</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">9615</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste 3012</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste lucas 1108 - 6394</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">7009</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Teste bloco informativo(barra superior com midias)</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste URL Portobello - 6755</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">2704</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Teste Cassio - nao apagar</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Pelegrini - 4821</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">8283</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">TESTE ID HML</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade teste patrick prod PDV - 12380</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">9350</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Teste para dupla vertical </a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade de testes vertical  - 4905</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">5620</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Teste Pix Mídia Tx6</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">bo - 1350</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">8282</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste PLAYER NOVO 01</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">teste de moedas e brasileirão - 11642</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">8285</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste PLAYER NOVO 04</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste lucas 1108 - 6394</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">1151</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Teste tablet</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Coronavírus - 5732</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">9777</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste TX2 1</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste lucas 1108 - 6394</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">9778</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">TESTE tx2 2</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste lucas 1108 - 6394</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">8055</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste001</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">cassio - 2556</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">3002</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">testes DEMO 2</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">bo - 1350</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">5655</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Testes Imidiatv</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade Alpha. - 5091</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">536</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Testes Imidiatv </a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Grade Suprimentos 01 - 11° andar (Tela 01) - 6194</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">4139</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">Testes Pixmidia 2</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">406672,NOVA LAPA PROMOCIONAL - RV Salvador PDV Nova Lapa - 6349</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">7638</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste_1708</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">007 - Grade - 7171</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">7598</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">teste_lucas TX 11.08</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">Teste lucas 1108 - 6394</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList --><tr ng-repeat="player in playerList" ng-hide="!player.vis" class="ng-scope">
+										<td>
+											<input ng-click="selecionarPlayer(player)" type="checkbox" ng-checked="player.sel">
+										</td>
+										<td style="width:1px;" ng-bind="player.id" ng-click="selecionarPlayer(player)" class="ng-binding">566</td>
+										<td style="white-space: nowrap" ng-click="selecionarPlayer(player)">
+											<a title="Regional:  Segmento: " ng-bind="player.ds" class="ng-binding">v88 teste</a>
+										</td>
+										<td style="white-space: nowrap" ng-bind="player.grade+' - '+player.idgrade" class="ng-binding">00503 Porto Velho - 4721</td>
+										<td style="white-space: nowrap" ng-bind="player.seg" class="ng-binding"></td>
+										<td style="white-space: nowrap" ng-bind="player.reg" class="ng-binding"></td>
+									</tr><!-- end ngRepeat: player in playerList -->
+								</tbody>
+
+							</table>
+
+						</div>
+
+						<div style="text-align:center;">
+							<div class="dica ng-binding" ng-bind="'Exibindo '+playersExibindo+' players. Players selecionados: '+playersSelecionados">Exibindo 37 players. Players selecionados: 0</div>
+							<br>
+							<button type="button" ng-click="selectAllPlayers()" class="btn btn-default btn-sm">Selecionar Todos</button>
+							<button type="button" ng-click="clearSelectionPlayers()" class="btn btn-default btn-sm">Selecionar Nenhum</button>
+							<button type="button" ng-click="invertSelectionPlayers()" class="btn btn-default btn-sm">Inverter Seleção</button>
+							<br>
+							<div class="dica">operações com players visiveis</div>
+							<br>
+							<br>
+							<button type="button" ng-click="addSelectedPlayers()" class="btn btn-primary"><i class="im-arrow-left3"></i> Adicionar Players Selecionados</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<div class="col-md-12">
+	<br>
+	<br>
+	<br>
+	<br>
+	<p style="">
+		<i style="color:#F00;" class="im-warning"></i>
+		A inserção da mídia nas grades com este símbolo de alerta será feito da forma tradicional, colocando-se a mídia no final da grade de forma simples. Para tirar proveito da
+		inserção dinâmica, configure uma grade de programação padrão com mídias de conteúdo informativo diversos e o tempo de duração máximo da grade de programação.
+	</p>
+</div>
+
+
+<script>
+
+    $(".btn-label-menu-tree").click(function(){
+        if ( parseInt($(this).attr('data-children'),10) == 0 ) return false;
+        $(this).parent().next().slideToggle();
+        $(this).parent().toggleClass("open");
+    })
+
+</script>							<br clear="all">
+						<p></p>
+					</div>
+				
+			</div>
+
+		</div>
+
+	</form>
+
+</div>
+
+<!--<iframe src="" frameborder="0" name="iframeSend" style="width:100%;height:200px;background:#F0F;display:block;"></iframe>-->
+<iframe src="" frameborder="0" name="iframeSend" id="iframeSend" style="width:100%;height:200px;background:#F0F;display:none;"></iframe>
+
+<script>
+	 // permite inserção dinamica
+    // permite que apenas um dos dois seja preenchido e o outro não
+    var permitirInicioOuFimDaCampanhaExclusivo = true;
+	</script>
+<script>
+	    var validarLimiteMidias = false ;
+	</script>
+
+<script src="/assets/plugins/angular/angular7.min.js"></script>
+<script src="/assets/controllers/Midia/Editar.js?time=131279_327e50542de410449889110db463ccfe"></script>
+
+<script src="/assets/plugins/forms/maskedinput/jquery.maskedinput.min.js"></script>
+
+<!-- remover dependencia abaixo e testar todas as funcionalidades inclusive upload -->
+<script src="/plugins/justGauge/js/justgauge.imidiatv.min.js"></script>
+
+<script src="/assets/js/internal-content.min.js"></script>
+
+<!-- remover dependencia abaixo e testar todas as funcionalidades inclusive upload -->
+<script src="/assets/js/appStart.min.js"></script>
+
+<script src="/assets/js/views-midia-editar.js?v=131279_327e50542de410449889110db463ccfe"></script>
+
+
+<script>
+
+    $("#btn-editar-midia-open-modal-substituir-midia").click(function(){
+        $("#modal-editar-midia-substituir-midia").modal("show");
+    })
+
+    $(function(){
+
+        // var formUploadWithCharm =
+        $("#form-editar-midia-substituir-arquivo").uploadMyFormWithCharm({
+            'validate':function () { $("#modal-editar-midia-substituir-midia").modal("hide"); return true } ,
+            'feedbackSuccess': function ( msg ) {
+                var objDate = new Date();
+                window.location.href = window.location.href.replace(/^([^?]+)(\?time=\d*)?/,"$1") + "?time=" + objDate.getTime()
+            } ,
+            'feedbackError': function ( msg ) {
+                if ( msg.toUpperCase() == "OK" || msg == "" ) {
+                    var objDate = new Date();
+                    window.location.href = window.location.href.replace(/^([^?]+)(\?time=\d*)?/, "$1") + "?time=" + objDate.getTime();
+                } else {
+                    feedback("Um erro ocorreu: "+msg,"error")
+                }
+            } ,
+        });
+
+        // var formUploadWithCharm =
+        $("#form-editar-midia-substituir-arquivo-data").uploadMyFormWithCharm({
+            'validate':function () { $("#modal-editar-midia-substituir-midia").modal("hide"); return true } ,
+            'feedbackSuccess': function ( msg ) {
+                var objDate = new Date();
+                window.location.href = window.location.href.replace(/^([^?]+)(\?time=\d*)?/,"$1") + "?time=" + objDate.getTime()
+            } ,
+            'feedbackError': function ( msg ) {
+                if ( msg.toUpperCase() == "OK" || msg == "" ) {
+                    var objDate = new Date();
+                    window.location.href = window.location.href.replace(/^([^?]+)(\?time=\d*)?/, "$1") + "?time=" + objDate.getTime();
+                } else {
+                    feedback("Um erro ocorreu: "+msg,"error")
+                }
+            } ,
+        });
+
+        $(".btn-abrir-formulario-reprovar-publicacao-usuario").click(function(){
+            $(this).parent().parent().find(".area-justificativa").slideDown();
+        });
+
+        $(".btn-aprovar-publicacao-usuario").click(function(){
+            var idMidia = $(this).attr("data-id-midia");
+            var idUsuario = $(this).attr("data-id-usuario");
+            var parentBlock = $(this).parent().parent();
+            var url = "/contentmanager/aprovarmidia/midia/"+idMidia+"/usuario/"+idUsuario;
+            startWait();
+            $.getJSON(url,function(response){
+                stopWait();
+                if ( response.STATUS == 'OK' ) {
+                    feedback("Mídia aprovada com sucesso!","success");
+                    $(parentBlock).remove();
+                } else {
+                    alert(response.MESSAGE)
+                }
+                checkTrabalhosPendentes();
+            });
+
+        });
+
+        $(".btn-reprovar-publicacao-usuario").click(function(){
+            var idMidia = $(this).attr("data-id-midia");
+            var idUsuario = $(this).attr("data-id-usuario");
+            var parentBlock = $(this).parent().parent();
+            var justificativa = $(this).parent().find(".text-justificativa").val()
+            var url = "/contentmanager/reprovarmidia/midia/"+idMidia+"/usuario/"+idUsuario;
+            startWait();
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {'justificativa':justificativa},
+                success: function(response){
+                    stopWait();
+                    if ( response.STATUS == 'OK' ) {
+                        feedback("Reprovação registrada com sucesso!","success");
+                        $(parentBlock).remove();
+                    } else {
+                        alert(response.MESSAGE)
+                    }
+                    checkTrabalhosPendentes();
+                },
+                dataType: "json"
+            });
+
+        });
+
+        $("#btn-enviar-midia-para-revisao").click(function(){
+            $("#txt-solicitar-nova-revisao").val('1');
+        });
+
+    });
+
+</script>
+
+<script>
+	 // permite inserção dinamica
+    // permite que apenas um dos dois seja preenchido e o outro não
+    var permitirInicioOuFimDaCampanhaExclusivo = true;
+	</script>
+
+<script>
+	    var validarLimiteMidias = false ;
+	</script>
+
+<script>
+    function submitFormMidia ( gradesSelecionadas ) {
+
+        if ( !validarLimiteMidias ) {
+            return document.getElementById('form-edit-midia').submit();
+        } else {
+            var dataInsercao = $("#data-agendamento-insercao-dinamica").val().replace(/^([\d]{2})\/([\d]{2})\/([\d]{4})\s([\d]{2})\D([\d]{2})(\D[\d]{2})?.*/,"$3$2$1$4$5")
+            dataInsercao += "00" ;
+            var url = "/json/getlimitemidiasusuario/datainsercao/"+dataInsercao;
+
+            $.getJSON(url,function(response){
+                console.log(response)
+                try	{
+
+                    if ( response.STATUS != "OK" ) throw response.MESSAGE;
+                    var espacosDisponiveis = parseInt(response.DATA['espacosDisponiveis'],10);
+                    if ( gradesSelecionadas.length > 0 && espacosDisponiveis == 0 ) throw "Você já atingiu o limite de mídias em exibição para a data selecionada. para agendar outra mídia, favor remova uma ou cancele um agendamento de inserção" ;
+                    if ( gradesSelecionadas.length > espacosDisponiveis ) throw "A quantidade de publicações selecionada supera o limite de mídias em exibição simultânea para a data selecionada, favor remova uma mídia ou cancele um agendamento";
+
+                    return document.getElementById('form-edit-midia').submit();
+
+                } catch ( e ) {
+                    feedback(e,'error');
+                }
+            })
+        }
+
+    }
+</script>
+    </div>
+</div>
+
+&nbsp;
+<br>
+<br>
+&nbsp;
+
+<!-- Javascripts -->
+<!-- Bootstrap plugins -->
+<script src="/assets/js/main-layout.min.js"></script>
+<script src="/plugins/jquery.preloaders.min.js"></script>
+<!--<script src="/assets/plugins/forms/maskedinput/jquery.maskedinput.min.js"></script>-->
+
+
+<script>
+
+	$(".modal-header").on("mousedown", function(mousedownEvt) {
+        var $draggable = $(this);
+        var x = mousedownEvt.pageX - $draggable.offset().left,
+            y = mousedownEvt.pageY - $draggable.offset().top;
+        $("body").on("mousemove.draggable", function(mousemoveEvt) {
+            $draggable.closest(".modal-dialog").offset({
+                "left": mousemoveEvt.pageX - x,
+                "top": mousemoveEvt.pageY - y
+            });
+        });
+        $("body").one("mouseup", function() {
+            $("body").off("mousemove.draggable");
+        });
+        $draggable.closest(".modal").one("bs.modal.hide", function() {
+            $("body").off("mousemove.draggable");
+        });
+    });
+
+</script>
+
+<!--feedback modal-->
+<div id="modal-default-feedback" style="display:none;" class="modal" tabindex="-1" role="dialog" aria-hidden="true" _data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div id="modal-default-feedback-panel-body" class="modal-body p0">
+				<div id="jst_8" class="panel mb0">
+					<div class="panel-heading">
+						<h4 class="panel-title"></h4>
+						<div class="panel-controls">
+							<a href="#" data-dismiss="modal"><i class="im-close"></i></a>
+						</div>
+					</div>
+					<div class="panel-body">
+						<span id="modal-default-feedback-message-body" style="font-size:1.3em;"></span> <br>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function startWait () {
+        $.preloader.start({
+            modal: true,
+            src : '/assets/img/loading.gif'
+        });
+    }
+
+    function stopWait () {
+		$.preloader.stop();
+    }
+
+    function feedback ( msg , type ) {
+
+	    //panel-success
+    	//panel-warning
+    	//panel-danger
+    	//panel-info
+
+		if ( typeof ( type ) == "undefined" ) type = "info";
+		switch ( type ) {
+			case "success" : case "sucess" : case "ok" :
+			type = "panel-success"; break;
+			case "warning" : case "danger" : case "error" : case "erro" :
+			type = "panel-warning" ; break;
+			default :
+			    type = "panel-info";
+		}
+		$("#modal-default-feedback-message-body").html(msg);
+        $("#modal-default-feedback-panel-body > div").attr("class","panel mb0 " + type);
+		$("#modal-default-feedback").modal("show");
+
+	}
+
+</script>
+
+<script src="/assets/js/UploadMyFormWithCharm.js?v=131279_327e50542de410449889110db463ccfe"></script>
+
+
+
+
+	<style>
+		._panel{
+			margin-bottom: 25px;
+			border-radius: 2px;
+			border: 0;
+			z-index: 1;
+			box-shadow: none;
+			background-color: #fff;
+		}
+		._panel.plain.panel-primary .panel-heading {
+			border-top: 3px solid #1e8bc3;
+			background-color: #fff;
+			color: #030303;
+		}
+		._panel.plain .panel-heading {
+			border-bottom: none;
+		}
+		._panel .panel-controls {
+			width: auto;
+			float: right;
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+		._panel.plain.panel-primary .panel-body {
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid #e2e0db;
+			padding-top: 0;
+		}
+		._panel.plain.panel-primary .panel-heading > .panel-controls > a i {
+			color: #95a5a6;
+		}
+		._panel .panel-controls a i {
+			font-size: 12px;
+			color: #fff;
+		}
+		._panel .panel-controls a {
+			text-decoration: none;
+			float: left;
+			width: auto;
+			padding: 8px 5px 7px;
+		}
+		#ui-datepicker-div{
+			z-index:9999!important;
+		}
+	</style>
+
+	<div class="_panel panel-primary plain panelRefresh" id="painel-aprovacoes-pendentes" style="width:300px;position: fixed; opacity: 1; z-index: 10; left: 10px; bottom: 10px;display:none;">
+		<!-- Start .panel -->
+		<div class="panel-heading">
+			<h4 class="panel-title">Aprovações pendentes</h4>
+			<div class="panel-controls">
+				<a href="#" id="btn-update-trabalhos-pendentes" class="panel-refresh"><i class="im-spinner12"></i></a>
+				<a href="#" id="btn-minimize-maximize-aprovacoes-pendentes" class="panel-minimize btn-minimize-maximize"><i class="im-minus"></i></a>
+				<a href="#" id="btn-fechar-aprovacoes-pendentes" class="panel-close"><i class="im-close"></i></a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-condensed _table-bordered">
+				<tbody id="table-aprovacoes-pendentes"></tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+<script>
+
+    $(".btn-minimize-maximize").click(function(){
+        var id = $(this).attr('id');
+        // alert($(this).attr('class'))
+        if ( $(this).hasClass("panel-maximize") ) {
+            window.localStorage.setItem(id+'-status',"O");
+
+            $(this).addClass('panel-minimize');
+            $(this).removeClass('panel-maximize');
+            $(this).find('i').attr('class','im-minus');
+            $(this).parent().parent().removeClass("min");
+            $(this).parent().parent().parent().find(".panel-body").slideDown();
+
+        } else {
+            window.localStorage.setItem(id+'-status',"C")
+
+            $(this).removeClass('panel-minimize')
+            $(this).addClass('panel-maximize')
+            $(this).find('i').attr('class','im-plus');
+            $(this).parent().parent().addClass("min");
+            $(this).parent().parent().parent().find(".panel-body").slideUp();
+        }
+    });
+
+    $("#btn-update-trabalhos-pendentes").click(function(){
+        checkTrabalhosPendentes();
+	})
+
+    $(function(){
+        $(".btn-minimize-maximize").each(function(){
+            var id = $(this).attr('id');
+            var oldStatus = window.localStorage.getItem(id+'-status')
+            if ( oldStatus == null ) {
+                return false;
+            } else if ( oldStatus.toUpperCase() == "C" ) { // closed
+                $(this).removeClass('panel-minimize')
+                $(this).addClass('panel-maximize')
+                $(this).find('i').attr('class','im-plus');
+                $(this).parent().parent().addClass("min");
+                $(this).parent().parent().parent().find(".panel-body").hide();
+            } else if ( oldStatus.toUpperCase() == "O" ) { // opened
+                $(this).addClass('panel-minimize');
+                $(this).removeClass('panel-maximize');
+                $(this).find('i').attr('class','im-minus');
+                $(this).parent().parent().removeClass("min");
+            }
+
+        })
+
+    })
+
+    $(".help-icon").click(function(){
+        $(this).next().slideToggle();
+    });
+
+    $("#btn-fechar-aprovacoes-pendentes").click(function(){
+        $("#painel-aprovacoes-pendentes").remove();
+	});
+
+</script>
+
+
+	<script>
+
+        var url = "/contentmanager/insercaodinamicapendentedeaprovacao/";
+
+        function checkTrabalhosPendentes (){
+            $.getJSON(url,function(response){
+                if ( response.STATUS == 'OK' ) {
+                    if ( response.DATA.length > 0 ) {
+                        // alert("show")
+
+                        $("#table-aprovacoes-pendentes").html("");
+
+                        var urlMidia = "/midia/editar/midia/" ;
+                        for ( var i = 0 ; i < response.DATA.length ; i++ ) {
+                            var pendencia = response.DATA[i];
+                            if ( pendencia['DS_USUARIO'] == null ) {
+                                pendencia['DS_USUARIO'] = 'não identificado';
+							}
+                            $("#table-aprovacoes-pendentes").append("<tr><td><a style=\"display:block;line-height:1em;\" href=\""+urlMidia+pendencia['ID_MIDIA']+"\">"+pendencia['DS_MIDIA']+"<BR>Solicitante: "+pendencia['DS_USUARIO']+"</a></td></tr>");
+						}
+
+                        $("#painel-aprovacoes-pendentes").show();
+                    } else {
+                        $("#painel-aprovacoes-pendentes").hide();
+                        $("#table-aprovacoes-pendentes").html("");
+					}
+                } else {
+                    alert(response.MESSAGE)
+                }
+
+            })
+        }
+
+        window.setInterval("checkTrabalhosPendentes()",300000)
+        checkTrabalhosPendentes();
+        // 300000 = 5min
+
+	</script>
+
+
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

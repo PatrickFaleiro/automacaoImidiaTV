@@ -1,0 +1,4 @@
+actor: StepDefinitionsTester
+modules:
+    enabled:
+        - \Helper\StepDefinitions

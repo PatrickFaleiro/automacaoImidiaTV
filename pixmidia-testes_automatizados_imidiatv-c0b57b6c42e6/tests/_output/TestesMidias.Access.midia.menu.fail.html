@@ -1,0 +1,1119 @@
+<html lang="en" class=" js no-touch"><head>
+    <meta charset="utf-8">
+    <title>IMidiaTV - SINALIZAÇÃO DIGITAL</title>
+
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Hugo Ferreira">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+	<link rel="stylesheet" href="/assets/css/all-styles.min.css?version=121779_1f3035d9157b61bde9e7eff8d07b9e8a">
+	<link rel="stylesheet" href="/assets/css/styles_fix.css?version=121779_1f3035d9157b61bde9e7eff8d07b9e8a">
+
+	
+    <script src="/assets/js/top-scripts.min.js?version="></script>
+    <script src="/assets/js/myapp.min.js?version="></script>
+    
+	<script>
+				var FILE_REPOSITORY_BASE_URL = "https://storage.googleapis.com/imidiatv-midias/";
+
+	</script>
+
+    <style>
+        #conpassAssistant.conpassAssistant {
+            top: auto !important;
+            bottom: 8px;
+            left: 10px;
+            width:67px;
+        }
+        body{
+            padding-left:0;
+            transition: padding-left .1s .1s;
+        }
+
+        body.show-help{
+            padding-left:250px;
+        }
+		.modal-header{
+			cursor:move;
+		}
+    </style>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+
+<body class="">
+
+
+
+
+
+
+	
+    	<style>
+		#no-active-item:active,#no-active-item:selected
+		{
+			background-color:initial!important;
+		}
+		.popup-user-message a{
+			background:initial!important;
+			color:#0092cc!important;
+			padding:0!important;
+			margin:0!important;
+			text-decoration:underline;
+		}
+		.dropdown-menu-scroll{
+            max-height: 85vh;
+            overflow-y: scroll
+        }
+	</style>
+	<div id="header" style="top:0px;" class="header-fixed">
+		<div class="container-fluid">
+			<div class="navbar">
+
+				<div class="navbar-header" style="width:100%;">
+					<!-- Show navigation toggle on phones -->
+
+
+					<!-- Show logo for large screens and laptops -->
+					<a class="navbar-brand visible-lg visible-md visible-sm visible-xs" href="/dashboard" style="position:absolute;z-index:1;">
+						<img src="/assets/img/logo-imidiatv.png" alt="" height="45">
+
+					</a>
+
+											<div style="color:#FF0;font-weight:bold;position: absolute;top:25px;left:220px;">
+															HOMOLOGAÇÃO
+													</div>
+					
+					<button id="showNav" class="navbar-toggle pull-right" type="button" data-toggle="collapse" data-target="#top-nav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<!-- Show logo for small screens -->
+					<!--                <a class="navbar-brand hidden-lg hidden-md hidden-xs" href="/">-->
+					<!--                    <img height="47" src="--><!--" alt="">-->
+					<!--                </a>-->
+
+				</div>
+
+
+				<nav id="top-nav" class="collapse navbar-collapse" role="navigation">
+
+					<!-- Navbar nav -->
+					<ul class="nav navbar-nav pull-right">
+
+													<li>
+								<a title="Página inicial" class="active-state" href="/dashboard"><i class="im-home"></i> <span class="txt"></span></a>
+							</li>
+						
+													<li>
+								<a title="Monitoramento dos players" class="" href="/monitoramento/otimizado"><i class="im-dashboard"></i> <span class="txt hidden-sm">Monitoramento</span></a>
+							</li>
+						
+						
+													<li class="dropdown">
+
+								<a href="#" data-toggle="dropdown">
+									<i class="im-drawer3"></i>
+									<span class="avatar-name hidden-sm">Cadastro</span>
+									<span class="caret ml5"></span>
+								</a>
+
+								<ul class="dropdown-menu right" role="menu" style="margin-left: -58.5px;">
+									<!--                                <li><a class="--><!--" href="/cliente"><i class="im-users4"></i> <span class="txt">Clientes</span></a></li>-->
+									<li><a class="" href="/grade"><i class="im-movie3"></i> <span class="txt">Grade de Programação</span></a></li>
+
+									
+									<li><a class="" href="/midia"><i class="im-film3"></i> <span class="txt">Midias</span></a></li>
+									<li><a class="" href="/player"><i class="im-screen"></i> <span class="txt">Meus Players</span></a></li>
+									<li><a class="" href="/musica"><i class="im-playlist"></i> <span class="txt">PlayList de Música</span></a></li>
+									<li><a class="" href="/agenciadenoticias"><i class="im-feed3"></i> <span class="txt">Agência de notícias</span></a></li>
+
+																			<li><a class="" href="/barraplayerv3"><i class="im-minus"></i> <span class="txt">Barra de informações inferior</span></a></li>
+									
+									<li><a class="" href="/barralateralv3"><i class="im-pause2"></i> <span class="txt">Barra de informações lateral</span></a></li>
+
+									<li><a class="" href="/redessociais"><i class="im-facebook2"></i> <span class="txt">Facebook</span></a></li>
+
+																	</ul>
+
+							</li>
+						
+													<li>
+								<a class="" href="/downloads"><i class="im-download7"></i> <span class="txt hidden-sm">Downloads</span></a>
+							</li>
+						
+						<li class="dropdown" id="dropdown-user-messages" style="background-color:initial!important;">
+
+														<a id="btn-open-mensagens-notificacao" href="javascript:;" data-toggle="dropdown">
+								<i class="fa fa-bell"></i>
+								<i id="marcador-notificacao" class="nav-notification im-circle2" style=""></i>
+							</a>
+
+							<div class="dropdown-menu right dropdown-menu-scroll" role="menu" style="width:400px;">
+																	<div id="user-message-list">
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917271" id="user-message-917271" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(10/08/2021 às 16:28) &nbsp; A Grade 7056 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917270" id="user-message-917270" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(10/08/2021 às 12:42) &nbsp; A mídia 377690 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917269" id="user-message-917269" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(05/08/2021 às 14:37) &nbsp; A Grade 6525 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917268" id="user-message-917268" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(05/08/2021 às 14:35) &nbsp; A Grade 1350 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917267" id="user-message-917267" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(01/08/2021 às 00:01) &nbsp; A Grade 5004 não pode receber inserções automáticas por estar marcada como sub-grade.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917266" id="user-message-917266" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(26/07/2021 às 09:47) &nbsp; A mídia <a href="http://imidiatv.hml/midia/editar/midia/377973">377973</a> foi aprovada pelo(a) usuário(a) Suporte no dia 2021-07-26_09-47-04 e foi programada para ser inserida na grade de programação Grade teste patrick prod PDV a partir da data 2021-06-29 15:37:00.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917264" id="user-message-917264" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(21/07/2021 às 09:38) &nbsp; A mídia 177026 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917263" id="user-message-917263" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(19/07/2021 às 11:52) &nbsp; A mídia <a href="http://imidiatv.hml/midia/editar/midia/377972">377972</a> foi aprovada pelo(a) usuário(a) Suporte no dia 2021-07-19_11-52-49 e foi programada para ser inserida na grade de programação Grade teste patrick prod PDV a partir da data 2021-06-29 15:52:00.											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917261" id="user-message-917261" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(13/07/2021 às 16:37) &nbsp; A mídia 182909 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917260" id="user-message-917260" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(08/07/2021 às 18:06) &nbsp; A mídia 52164 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																					<div class="_alert alert-default popup-user-message" data-msg-id="917259" id="user-message-917259" style="padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;">
+												(07/07/2021 às 16:51) &nbsp; A mídia 190401 teve sua data de finalização de campanha zerada para tornar possível sua inserção na grade de programação desejada											</div>
+																			</div>
+									<button data-ultimo-id="917259" class="btn btn-default btn-xs" style="width:100%;" type="button" id="btn-carregar-mais-notificacoes">carregar mais</button>
+															</div>
+
+						</li>
+
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown">
+								<i class="im-user"></i>
+								<span class="avatar-name hidden-sm">Suporte</span>
+								<span class="caret ml5"></span>
+							</a>
+
+							<ul class="dropdown-menu right" role="menu" style="margin-left: -38px;">
+
+								<!--                                <li><i class="im-cog"></i> Código de usuário: 100--><!--</li>-->
+								<li><a style="cursor:text;">Código de usuário: 1002</a></li>
+
+																	<li><a href="/configuracoes"><i class="im-cog"></i> Configurações</a></li>
+								
+																											<li><a href="/relatorio"><i class="im-file-powerpoint"></i> Relatórios</a></li>
+																	
+																											<li><a href="/relatorioacoes"><i class="im-file-powerpoint"></i> Relatório Ações</a></li>
+																	
+								
+									<li><a class="" href="/usuarios"><i class="im-users4"></i> <span class="txt">Usuários de acesso</span></a></li>
+
+									
+									
+								
+								<li><a href="/login/logout"><i class="im-switch"></i> Sair</a></li>
+
+							</ul>
+
+						</li>
+
+						
+													<li class="dropdown">
+								<a href="#" data-toggle="dropdown">
+
+									<img src="/assets/img/logo-sm.png" alt="" style="height:25px;">
+
+									<!--							<i class="im-user7"></i>-->
+									<!--	                            <span class="avatar-name">ADMIN</span>-->
+									<!--	                            <span class="caret ml5"></span>-->
+								</a>
+
+								<ul class="dropdown-menu right dropdown-menu-scroll" role="menu" style="margin-left: -110px;">
+									<li><a href="http://webmail.imidiatv.com.br" target="_blank"><i class="im-envelop-opened"></i> E-Mail Corporativo</a></li>
+									<li><a href="/gerenciatemplate"><i class="im-drawer3"></i> Gerência templates</a></li>
+									<li><a href="/imidiatv/usuariolist"><i class="im-users4"></i> Usuários</a></li>
+									<li><a href="/imidiatv/monitoramentologinplayer2"><i class="im-screen"></i> Players de Clientes</a></li>
+
+									<li><a href="/imidiatv/acl"><i class="im-lock"></i> ACL</a></li>
+
+
+									<li><a href="/imidiatv/help"><i class="im-support"></i> Área de Suporte</a></li>
+									<!--                                    <li><a href="/imidiatv/geolocalizacao" onclick="alert('em breve');return false"><i class="fa im-map3"></i> Geolocalização</a></li>-->
+									<li><a href="/imidiatv/inboxlist"><i class="im-box-add"></i> Inbox</a></li>
+
+									<li><a style="font-weight: bold;" href="/imidiatv/categoriastemplates"><i class="im-movie2"></i> Mídias de Templates</a></li>
+
+									<li><a style="" href="/imidiatv/fontes"><i class="fa  fa-font"></i> Fontes editor</a></li>
+									<!-- <li><a href="/login/logout"><i class="im-switch"></i> Sair</a></li> -->
+
+
+									<li><a href="/imidiatv/monitoramentologinplayer"><i class="im-screen"></i> Monitoramento Players (suporte)</a></li>
+									<li><a href="/imidiatv/monitoramentocoleta"><i class="im-dashboard"></i> Monitoramento Coleta</a></li>
+									<li><a href="/imidiatv/configuracoessite"><i class="im-cog"></i> Configurações do Site</a></li>
+
+																	</ul>
+
+							</li>
+											</ul>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+        $("#btn-open-mensagens-notificacao").click(function(){
+
+            var msgs = document.getElementsByClassName("popup-user-message");
+            var idList = [];
+            for ( var i in msgs ) {
+
+                if ( typeof msgs[i] != 'object' ) continue;
+                var id = $(msgs[i]).attr("data-msg-id");
+                if ( id == undefined ) continue ;
+
+                idList.push(id)
+
+            }
+
+            if ( idList.length > 0 ) {
+                var url = "/json/removeusermessage/idm/" + idList.join(",")
+
+                $.getJSON(url,function(response){
+
+                    if ( response.STATUS == 'OK' ) {
+                        $("#marcador-notificacao").hide();
+                    } else {
+                        alert(response.MESSAGE)
+                    }
+
+                })
+            }
+
+
+
+        })
+
+		$("#btn-carregar-mais-notificacoes").click(function(){
+            var id = $(this).attr("data-ultimo-id");
+		    var url = "/json/loadoldusermessages/ultimoid/"+id;
+		    startWait();
+		    $.getJSON(url,function(objResponse){
+                stopWait();
+		        if ( objResponse.STATUS == "OK" ) {
+		            console.log(objResponse)
+
+					if ( objResponse.DATA.length == 0 ) {
+                        $("#btn-carregar-mais-notificacoes").attr("disabled","disabled");
+                        return 0
+					}
+
+		        	var userMessageList = $("#user-message-list");
+		        	for ( var i in objResponse.DATA ) {
+		        		var userMessage = objResponse.DATA[i];
+                        var newDiv =  "<div class=\"alert-default popup-user-message\" data-msg-id=\"" + userMessage['ID_USER_MESSAGE'] + "\" id=\"user-message-" + userMessage['ID_USER_MESSAGE'] + "\" style=\"padding:3px 10px;border-bottom:1px solid #ccc;line-height:1.5em;\">";
+                        newDiv += "(" + userMessage['DT_CREATED'].replace(/^(\d\d\d\d)-(\d\d)-(\d\d) (\d\d:\d\d):(\d\d)$/,"$3/$2/$1 às $4") + ") &nbsp; " + userMessage['DS_MENSAGEM'];
+                        newDiv += "</div>";
+                        $(userMessageList).append(newDiv);
+                    }
+
+                    $("#btn-carregar-mais-notificacoes").attr("data-ultimo-id",userMessage['ID_USER_MESSAGE']);
+
+				} else {
+		            feedback(objResponse.MESSAGE,'error');
+				}
+
+			});
+		    $("#dropdown-user-messages").addClass("open");
+			return false;
+		});
+	</script>
+
+
+
+
+<div id="loading-content-div" style="display:none;">
+    <div class="center" style="text-align:center;">
+        <img src="/assets/img/loading.gif" alt="">
+    </div>
+</div>
+
+<div id="content">
+
+	
+
+    <div class="content-wrapper">
+
+		<!-- FEEDBACK MODAL ABAIXO -->
+				
+		<!-- CONTEUDO -->
+        
+
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <button type="button" class="close" data-dismiss="modal">-->
+<!--                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>-->
+<!--                </button>-->
+<!--                <h4 class="modal-title" id="myModalLabel2">Atenção!</h4>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <p>-->
+<!--                    Devido à crescente demanda de nossos clientes, estaremos neste sábado dia 23/09/2017 realizando uma migração de servidor-->
+<!--                    para garantir a qualidade de nossos serviços que se iniciará às 18h-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<script src="/plugins/justGauge/js/justgauge.imidiatv.min.js"></script>
+
+<style>
+	.start-page-shortcut{
+		text-align: center;
+		height:130px;
+	}
+	.start-page-shortcut a{
+		display: block;
+	}
+	.start-page-shortcut h1 i{
+		font-size: 1.3em;
+	}
+    .dashboard-detailed-data{
+        display:none;
+    }
+</style>
+
+<div class="content-inner">
+
+	<div class="row">
+
+<!--			<h3>--><!--! O que você deseja?</h3>-->
+
+		<div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+			<div class="row">
+<!--				<div class="col-md-1"></div>-->
+				<div class="col-md-12">
+
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/monitoramento/otimizado">
+							<h1><i class="im-dashboard"></i></h1>
+							<h4>Monitoramento</h4>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/player">
+							<h1><i class="im-screen"></i></h1>
+							<h4>Meus Players</h4>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/midia">
+							<h1><i class="im-film3"></i></h1>
+							<h4>Minhas Mídias</h4>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/grade">
+							<h1><i class="im-movie3"></i></h1>
+							<h4>Grades de programação</h4>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/agenciadenoticias/">
+							<h1><i class="im-feed3"></i></h1>
+							<h4>Agência de notícias</h4>
+						</a>
+					</div>
+
+<!--					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">-->
+<!--						<a href="/geolocalizacao">-->
+<!--							<h1><i class="im-map3"></i></h1>-->
+<!--							<h4>Geolocalização</h4>-->
+<!--						</a>-->
+<!--					</div>-->
+
+											<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+							<a href="/relatorio">
+								<h1><i class="im-file-powerpoint"></i></h1>
+								<h4>Relatórios</h4>
+							</a>
+						</div>
+										
+											<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+							<a href="/usuarios/">
+								<h1><i class="im-users4"></i></h1>
+								<h4>Usuários de acesso</h4>
+							</a>
+						</div>
+					
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+                        <a href="/musica">
+                            <h1><i class="im-playlist"></i></h1>
+                            <h4>Playlist de Música</h4>
+                        </a>
+                    </div>
+
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/redessociais">
+							<h1><i class="im-facebook2"></i></h1>
+							<h4>Facebook</h4>
+						</a>
+					</div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+                        <a href="/barraplayerv3">
+                            <h1><i class="im-minus"></i></h1>
+                            <h4>Barra Inferior</h4>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+                        <a href="/barralateral">
+                            <h1><i class="im-pause2"></i></h1>
+                            <h4>Barra Lateral</h4>
+                        </a>
+                    </div>
+                    
+                    
+                    
+                    
+											<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+							<a href="/configuracoes">
+								<h1><i class="im-cog"></i></h1>
+								<h4>Configurações</h4>
+							</a>
+						</div>
+					
+											<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+							<a href="/dashboard/instalar">
+								<h1><i class="im-download7"></i></h1>
+								<h4>Instalar o aplicativo</h4>
+							</a>
+						</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/inbox">
+							<!-- <h1><i class="fa fa-terminal"></i></h1> -->
+							<h1><i class="im-console"></i></h1>
+							<h4>Comandos enviados aos players</h4>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 start-page-shortcut ">
+						<a href="/login/logout">
+							<h1><i class="im-switch"></i></h1>
+							<h4>Sair</h4>
+						</a>
+					</div>
+
+				</div>
+<!--				<div class="col-md-1"></div>-->
+			</div>
+
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-3 col-xs-12" style="">
+
+<!--			<div class="panel panel-teal  plain toggle _panelMove _panelClose _panelRefresh_">-->
+<!--				<div class="panel-heading">-->
+<!--					<h4 class="panel-title" style="text-align:center;">RESUMO DO SISTEMA</h4>-->
+<!--				</div>-->
+<!--				<div class="panel-body">-->
+<!--				</div>-->
+<!--			</div>-->
+
+							<a href="http://35.208.138.174/midia/index/pasta/4840" target="_blank">
+                	<img src="https://storage.googleapis.com/imidiatv-midias/banner/cafcd888d9a0475e51babfa7eb2d13db.png" alt="" style="width:100%;">
+				</a>
+			
+			<div class="panel panel-teal  plain toggle _panelMove _panelClose _panelRefresh_" id="jst_0">
+				<!-- Start .panel -->
+				<div class="panel-heading">
+<!--					<h4 class="panel-title"><i class="fa fa-th-list"></i> ToDo</h4>-->
+					<h4 class="panel-title" style="text-align:center;">RESUMO DO SISTEMA</h4>
+				<div class="panel-controls"><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a></div></div>
+				<div class="panel-body">
+					<div class="todo-widget">
+<style>
+	.system-stats-widget{
+
+	}
+	.system-stats-widget .system-stats-widget-text{
+		text-transform:uppercase;
+		font-weight: 300;
+		font-size:12px;
+		line-height: 1.3em;
+		display: block;
+		margin-top:10px
+	}
+	.system-stats-widget .system-stats-widget-number{
+		font-size:20px;
+	}
+	.todo-list .stats-label {
+		float:right;
+	}
+	.todo-list .todo-task-text{
+		display: inline;
+	}
+	.icon-zero-temperatura{
+		font-size:10px;
+		position: relative;
+		bottom:5px;
+	}
+</style>
+
+<!--.instagram-widget -->
+					<div class="system-stats-widget">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+							<label class="system-stats-widget-text">Mídias em exibição</label>
+							<strong class="system-stats-widget-number">574</strong>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+							<label class="system-stats-widget-text">Players<br>ativos</label>
+							<strong class="system-stats-widget-number">35</strong>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+							<label class="system-stats-widget-text">Horas em exibição</label>
+							<strong class="system-stats-widget-number">03:22:24</strong>
+						</div>
+
+<!--						<div class="col-lg-6 col-md-6 col-xs-12 text-center">-->
+<!--							<label class="system-stats-widget-text">Players atualizando grade de programação</label>-->
+<!--							<strong class="system-stats-widget-number">--><!--</strong>-->
+<!--						</div>-->
+<!---->
+<!--						<div class="col-lg-6 col-md-6 col-xs-12 text-center">-->
+<!--							<label class="system-stats-widget-text">Players faltando geolocalização</label>-->
+<!--							<strong class="system-stats-widget-number">--><!--</strong>-->
+<!--						</div>-->
+					</div>
+
+						<br clear="all">
+						<br clear="all">
+
+						<ul class="todo-list" id="today">
+
+							
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Última versão Windows/Linux</div>
+								<span class="stats-label label label-dark"> 1.2.37 </span>
+							</li>
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Última versão Android</div>
+								<span class="stats-label label label-dark"> 1.5.9 </span>
+							</li>
+
+                                                            <li class="todo-task-item">
+                                    <a href="javascript:" class="toggle-dashboard-data">
+                                        <div class="todo-task-text">Players com APP Desatualizado</div>
+                                        <span class="stats-label label label-danger"> 40 </span>
+                                    </a>
+                                </li>
+                                <li class="dashboard-detailed-data">
+                                    <ul>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/44">mx9 teste Gustavo=deployteste <strong> - Android 1.4.98</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/456">teste <strong> - Android 1.5.5.7</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/502">Player Livre Testes <strong> - Android 1.4.87</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/536">Testes Imidiatv  <strong> - Android 1.5.7.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/566">v88 teste <strong> - Android 1.5.5.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/589">Player de testes Pixmidia <strong> - Android 1.5.8.3</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/893">Teste Mk8082 (antigo) <strong> - Android 1.4.99</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/897">Mxq android 4 <strong> - Android 1.5.6.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/1148">celular cassio <strong> - Android 1.5.5.4</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/1151">Teste tablet <strong> - Android 1.5.8.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/1307">a95x android 6 <strong> - Android 1.5.3</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/1401">Celular <strong> - Android 1.4.80</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/1743">t95n <strong> - Android 1.5.7.3</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/2347">TESTE RSS GRUPO SINOS <strong> - Android 1.4.81</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/2704">Teste Cassio - nao apagar <strong> - Android 1.5.6.9</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/2838">player de testes antigo <strong> - Android 1.5.7.2</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3002">testes DEMO 2 <strong> - Android 1.5.8.8</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3003">Player Livre Testes <strong> - Android 1.5.7.5</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3006">Player de testes DEMO <strong> - Android 1.5.8.8</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3215">KARINE - TESTES LOTERIAS <strong> - Android 1.5.7.6</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3317">Player Livre Testes <strong> - Android 1.4.91</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3423">Player Livre Testes <strong> - Android 1.5.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/3717">Player Livre Testes <strong> - Android 1.4.92</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/4139">Testes Pixmidia 2 <strong> - Android 1.5.7.3</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/4153">Player Tx3 - Gustavo <strong> - Android 1.5.7.6</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/4531">Player do MKT <strong> - Android 1.5.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/4937">Teste Karine 2 <strong> - Android </strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/5071">Player Windows Gustavo <strong> - Android 1.5.5.4</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/5620">Teste Pix Mídia Tx6 <strong> - Android 1.5.8.8</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/5655">Testes Imidiatv <strong> - Android 1.5.7.3</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/7009">Teste bloco informativo(barra superior com midias) <strong> - Android 1.5.8.2</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/7598">teste_lucas TX 11.08 <strong> - Android 1.5.8.2</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/8150">TESTE 2509 <strong> - Android 1.5.7.5</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/8285">teste PLAYER NOVO 04 <strong> - Android 1.5.7.5</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/9350">Teste para dupla vertical  <strong> - Android 1.5.7.6</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/9777">teste TX2 1 <strong> - Android 1.5.8.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/9778">TESTE tx2 2 <strong> - Android 1.5.8.1</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/9890">Player de Testes Pix <strong> - Android 1.5.8.8</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/4086">Player Livre Testes <strong> - Windows 1.2.27</strong></a>
+                                            </li>
+                                                                                    <li>
+                                                <a target="_blank" href="/player/configurar/player/597">desktop cassio linux <strong> - Linux 1.2.22</strong></a>
+                                            </li>
+                                                                            </ul>
+                                </li>
+                            
+                            
+							
+
+<!--							<li class="todo-task-item">-->
+<!--								<div class="todo-task-text">Players faltando geolocalização</div>-->
+<!--								<span class="stats-label label label-dark"> --><!-- </span>-->
+<!--							</li>-->
+
+<!--						<li class="todo-task-item "> -->
+<!--							<div class="todo-task-text">Mídias em exibição</div>-->
+<!--							<span class="stats-label label label-dark"> --><!-- </span>-->
+<!--						</li>-->
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Players em atualização da grade de programação</div>
+								<span class="stats-label label label-dark"> 11 </span>
+							</li>
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Data último login</div>
+								<span class="stats-label label label-dark"> 12/08/2021 às 17:23 </span>
+							</li>
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Total de mídias na galeria</div>
+								<span class="stats-label label label-dark"> 746 </span>
+							</li>
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Grades de programação em exibição</div>
+								<span class="stats-label label label-dark"> 16 </span>
+							</li>
+
+							<li class="todo-task-item "> <!--task-done-->
+								<div class="todo-task-text">Uso do espaço em disco</div>
+								<span class="stats-label label label-dark"> 64.6% </span>
+							</li>
+
+<!--						<li class="todo-task-item">-->
+<!--							<div class="todo-task-text">Total de horas em exibição</div>-->
+<!--							<span class="stats-label label label-dark"> --><!-- </span>-->
+<!--						</li>-->
+
+<!--						<li class="todo-task-item">-->
+<!--							<div class="todo-task-text">Players ativos</div>-->
+<!--							<span class="stats-label label label-dark"> --><!-- </span>-->
+<!--						</li>-->
+
+						</ul>
+<!--						<h4 class="todo-period">Novidades</h4>-->
+<!--						<ul class="todo-list" id="tomorrow">-->
+<!--							<li class="todo-task-item">-->
+<!--								Melhoria no desempenho do site-->
+<!--							</li>-->
+<!--							<li class="todo-task-item">-->
+<!--								Agência de notícias-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--						<h4 class="todo-period">Resumo do sistema</h4>-->
+<!--						<ul class="todo-list" id="tomorrow">-->
+<!--							<li class="todo-task-item">-->
+<!--								<div class="todo-task-text">Espaço em disco</div>-->
+<!--							</li>-->
+<!--							<li class="todo-task-item">-->
+<!--								<span class="todo-category label label-danger"> 200h </span>-->
+<!--								<div class="todo-task-text">total de horas das grades em exibição</div>-->
+<!--							</li>-->
+<!--							<li class="todo-task-item">-->
+<!--								<span class="todo-category label label-danger"> 17 </span>-->
+<!--								<div class="todo-task-text">total de players ativos</div>-->
+<!--							</li>-->
+<!--							<li class="todo-task-item">-->
+<!--								<span class="todo-category label label-danger"> 150 </span>-->
+<!--								<div class="todo-task-text">total de mídias em exibição</div>-->
+<!--							</li>-->
+<!--						</ul>-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script src="/assets/js/internal-content.min.js"></script>
+<script src="/assets/js/appStart.min.js"></script>
+
+<script>
+
+	
+</script>
+
+<script>
+
+    $(".toggle-dashboard-data").click(function(){
+        $(this).parent().next().slideToggle();
+    })
+
+</script>
+    </div>
+</div>
+
+&nbsp;
+<br>
+<br>
+&nbsp;
+
+<!-- Javascripts -->
+<!-- Bootstrap plugins -->
+<script src="/assets/js/main-layout.min.js"></script>
+<script src="/plugins/jquery.preloaders.min.js"></script>
+<!--<script src="/assets/plugins/forms/maskedinput/jquery.maskedinput.min.js"></script>-->
+
+
+<script>
+
+	$(".modal-header").on("mousedown", function(mousedownEvt) {
+        var $draggable = $(this);
+        var x = mousedownEvt.pageX - $draggable.offset().left,
+            y = mousedownEvt.pageY - $draggable.offset().top;
+        $("body").on("mousemove.draggable", function(mousemoveEvt) {
+            $draggable.closest(".modal-dialog").offset({
+                "left": mousemoveEvt.pageX - x,
+                "top": mousemoveEvt.pageY - y
+            });
+        });
+        $("body").one("mouseup", function() {
+            $("body").off("mousemove.draggable");
+        });
+        $draggable.closest(".modal").one("bs.modal.hide", function() {
+            $("body").off("mousemove.draggable");
+        });
+    });
+
+</script>
+
+<!--feedback modal-->
+<div id="modal-default-feedback" style="display:none;" class="modal" tabindex="-1" role="dialog" aria-hidden="true" _data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div id="modal-default-feedback-panel-body" class="modal-body p0">
+				<div id="jst_1" class="panel mb0">
+					<div class="panel-heading">
+						<h4 class="panel-title"></h4>
+						<div class="panel-controls">
+							<a href="#" data-dismiss="modal"><i class="im-close"></i></a>
+						</div>
+					</div>
+					<div class="panel-body">
+						<span id="modal-default-feedback-message-body" style="font-size:1.3em;"></span> <br>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function startWait () {
+        $.preloader.start({
+            modal: true,
+            src : '/assets/img/loading.gif'
+        });
+    }
+
+    function stopWait () {
+		$.preloader.stop();
+    }
+
+    function feedback ( msg , type ) {
+
+	    //panel-success
+    	//panel-warning
+    	//panel-danger
+    	//panel-info
+
+		if ( typeof ( type ) == "undefined" ) type = "info";
+		switch ( type ) {
+			case "success" : case "sucess" : case "ok" :
+			type = "panel-success"; break;
+			case "warning" : case "danger" : case "error" : case "erro" :
+			type = "panel-warning" ; break;
+			default :
+			    type = "panel-info";
+		}
+		$("#modal-default-feedback-message-body").html(msg);
+        $("#modal-default-feedback-panel-body > div").attr("class","panel mb0 " + type);
+		$("#modal-default-feedback").modal("show");
+
+	}
+
+</script>
+
+<script src="/assets/js/UploadMyFormWithCharm.js?v=121779_1f3035d9157b61bde9e7eff8d07b9e8a"></script>
+
+
+
+
+	<style>
+		._panel{
+			margin-bottom: 25px;
+			border-radius: 2px;
+			border: 0;
+			z-index: 1;
+			box-shadow: none;
+			background-color: #fff;
+		}
+		._panel.plain.panel-primary .panel-heading {
+			border-top: 3px solid #1e8bc3;
+			background-color: #fff;
+			color: #030303;
+		}
+		._panel.plain .panel-heading {
+			border-bottom: none;
+		}
+		._panel .panel-controls {
+			width: auto;
+			float: right;
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+		._panel.plain.panel-primary .panel-body {
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid #e2e0db;
+			padding-top: 0;
+		}
+		._panel.plain.panel-primary .panel-heading > .panel-controls > a i {
+			color: #95a5a6;
+		}
+		._panel .panel-controls a i {
+			font-size: 12px;
+			color: #fff;
+		}
+		._panel .panel-controls a {
+			text-decoration: none;
+			float: left;
+			width: auto;
+			padding: 8px 5px 7px;
+		}
+		#ui-datepicker-div{
+			z-index:9999!important;
+		}
+	</style>
+
+	<div class="_panel panel-primary plain panelRefresh" id="painel-aprovacoes-pendentes" style="width:300px;position: fixed; opacity: 1; z-index: 10; left: 10px; bottom: 10px;display:none;">
+		<!-- Start .panel -->
+		<div class="panel-heading">
+			<h4 class="panel-title">Aprovações pendentes</h4>
+			<div class="panel-controls">
+				<a href="#" id="btn-update-trabalhos-pendentes" class="panel-refresh"><i class="im-spinner12"></i></a>
+				<a href="#" id="btn-minimize-maximize-aprovacoes-pendentes" class="panel-minimize btn-minimize-maximize"><i class="im-minus"></i></a>
+				<a href="#" id="btn-fechar-aprovacoes-pendentes" class="panel-close"><i class="im-close"></i></a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-condensed _table-bordered">
+				<tbody id="table-aprovacoes-pendentes"></tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+<script>
+
+    $(".btn-minimize-maximize").click(function(){
+        var id = $(this).attr('id');
+        // alert($(this).attr('class'))
+        if ( $(this).hasClass("panel-maximize") ) {
+            window.localStorage.setItem(id+'-status',"O");
+
+            $(this).addClass('panel-minimize');
+            $(this).removeClass('panel-maximize');
+            $(this).find('i').attr('class','im-minus');
+            $(this).parent().parent().removeClass("min");
+            $(this).parent().parent().parent().find(".panel-body").slideDown();
+
+        } else {
+            window.localStorage.setItem(id+'-status',"C")
+
+            $(this).removeClass('panel-minimize')
+            $(this).addClass('panel-maximize')
+            $(this).find('i').attr('class','im-plus');
+            $(this).parent().parent().addClass("min");
+            $(this).parent().parent().parent().find(".panel-body").slideUp();
+        }
+    });
+
+    $("#btn-update-trabalhos-pendentes").click(function(){
+        checkTrabalhosPendentes();
+	})
+
+    $(function(){
+        $(".btn-minimize-maximize").each(function(){
+            var id = $(this).attr('id');
+            var oldStatus = window.localStorage.getItem(id+'-status')
+            if ( oldStatus == null ) {
+                return false;
+            } else if ( oldStatus.toUpperCase() == "C" ) { // closed
+                $(this).removeClass('panel-minimize')
+                $(this).addClass('panel-maximize')
+                $(this).find('i').attr('class','im-plus');
+                $(this).parent().parent().addClass("min");
+                $(this).parent().parent().parent().find(".panel-body").hide();
+            } else if ( oldStatus.toUpperCase() == "O" ) { // opened
+                $(this).addClass('panel-minimize');
+                $(this).removeClass('panel-maximize');
+                $(this).find('i').attr('class','im-minus');
+                $(this).parent().parent().removeClass("min");
+            }
+
+        })
+
+    })
+
+    $(".help-icon").click(function(){
+        $(this).next().slideToggle();
+    });
+
+    $("#btn-fechar-aprovacoes-pendentes").click(function(){
+        $("#painel-aprovacoes-pendentes").remove();
+	});
+
+</script>
+
+
+	<script>
+
+        var url = "/contentmanager/insercaodinamicapendentedeaprovacao/";
+
+        function checkTrabalhosPendentes (){
+            $.getJSON(url,function(response){
+                if ( response.STATUS == 'OK' ) {
+                    if ( response.DATA.length > 0 ) {
+                        // alert("show")
+
+                        $("#table-aprovacoes-pendentes").html("");
+
+                        var urlMidia = "/midia/editar/midia/" ;
+                        for ( var i = 0 ; i < response.DATA.length ; i++ ) {
+                            var pendencia = response.DATA[i];
+                            if ( pendencia['DS_USUARIO'] == null ) {
+                                pendencia['DS_USUARIO'] = 'não identificado';
+							}
+                            $("#table-aprovacoes-pendentes").append("<tr><td><a style=\"display:block;line-height:1em;\" href=\""+urlMidia+pendencia['ID_MIDIA']+"\">"+pendencia['DS_MIDIA']+"<BR>Solicitante: "+pendencia['DS_USUARIO']+"</a></td></tr>");
+						}
+
+                        $("#painel-aprovacoes-pendentes").show();
+                    } else {
+                        $("#painel-aprovacoes-pendentes").hide();
+                        $("#table-aprovacoes-pendentes").html("");
+					}
+                } else {
+                    alert(response.MESSAGE)
+                }
+
+            })
+        }
+
+        window.setInterval("checkTrabalhosPendentes()",300000)
+        checkTrabalhosPendentes();
+        // 300000 = 5min
+
+	</script>
+
+
+
+</body></html>

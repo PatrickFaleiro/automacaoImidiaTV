@@ -1,0 +1,15 @@
+actor: LoginTester
+modules:
+    enabled:
+        #- PhpBrowser:
+        #   url: 'http://imidiatv.hml/'
+        - WebDriver:
+            url: 'http://imidiatv.hml/'
+            #window_size: false # disabled in ChromeDriver
+            port: 9515
+            browser: chrome
+            host: localhost
+            capabilities:
+             chromeOptions:
+                 args: ["start-maximized"]
+        - \Helper\Login
